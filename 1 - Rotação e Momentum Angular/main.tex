@@ -6,6 +6,7 @@
 \usepackage{indentfirst}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{array}
     % Imagens
 \usepackage{graphicx}
 \usepackage{float}
@@ -13,6 +14,11 @@
 \usepackage{textcomp}
 \usepackage{siunitx}
 \usepackage{amsmath}
+\usepackage{amssymb}
+
+% Table centering -> array package
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
 
 
 %Bibliografia
