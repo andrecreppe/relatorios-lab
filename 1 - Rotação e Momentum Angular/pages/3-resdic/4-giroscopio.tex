@@ -1,0 +1,150 @@
+\subsection{Precessão do Giroscópio}
+
+Baseado no video disponibilizado para esse experimento os dados que temos disponíveis são os seguintes:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ |M{5cm}||M{2cm}||M{2cm}||M{2cm}|  }
+        \hline
+        \textbf{O que foi medido} & \textbf{Valor} & \textbf{Incerteza} & \textbf{Unidade}\\
+        \hline
+        Meio eixo (D)                               & 0,0565    & $\pm$ 0,0001  & m\\
+        Diâmetro do eixo (d\textsubscript{eixo})    & 0,0070    & $\pm$ 0,0001  & m\\
+        Raio externo (R\textsubscript{1})           & 0,0702    & $\pm$ 0,0001  & m\\
+        Raio interno (R\textsubscript{2})           & 0,0625    & $\pm$ 0,0001  & m\\
+        Largura externa (l\textsubscript{1})        & 0,0203    & $\pm$ 0,0001  & m\\
+        Largura interna (l\textsubscript{2})        & 0,0043    & $\pm$ 0,0001  & m\\
+        Massa do conjunto (M)                       & 1,116     & $\pm$ 0,001   & kg\\
+        Densidade do material ($\rho _{aco}$)       & 8000,0    & -             & kg/$m^3$\\
+        \hline
+    \end{tabular}
+    \caption{Dados físicos do Giroscópio}
+\end{table}
+
+Assim sendo, podemos começar a calcular as massas de cada peça do giroscópio:
+
+\[ r_{eixo} = \frac{d_{eixo}}{2} \Rightarrow m_e = (2 D \pi r_{eixo}^2) \cdot \rho_{aco} \]
+\[ r_{eixo} = \frac{0,0070}{2} \Rightarrow m_e = (2 \cdot 0,0565 \cdot \pi \cdot (0,0035)^2) * 8000,0 = 0,34789997 (kg)\]
+
+\[ m_d = (l_2 \pi R_2^2) \cdot \rho_{aco} \]
+\[ m_d = (0,0043 \pi (0,0625)^2) \cdot 8000,0 = 0,4221515 (kg) \]
+
+\[ m_a = (l_1 \pi R_1^2) \cdot \rho_{aco} \]
+\[ m_a = (0,0203 \pi (0,0702 - 0,0625)^2) \cdot 8000,0 = 0,302494 (kg) \]
+
+Observe que se somarmos os valores acima obteremos 1,0725459 kg, que é bem próximo da massa do conjunto M, indicando que nossos cálculos estão no caminho certo (o resto da massa está no pedaço de alumínio que foi pedido para desconsiderarmos). Propagando as incertezas agora teremos:
+
+\[\Delta r_{eixo} = \frac{\Delta d_{eixo}}{2} = \frac{0,0001}{2} = 0,00005 (m)\]
+
+\[ \Delta m_e = \rho_{aco} \cdot 2 \pi \left( \Delta D \cdot r_{eixo}^2 + D \cdot 2 \cdot r_{eixo} \cdot \Delta r_{eixo} \right)\]
+\[ \Delta m_e = 8000,0 \cdot 2 \pi \left(0,0001 \cdot (0,0035)^2 + 0,0565 \cdot 2 \cdot 0,0035 \cdot 0,00005 \right) = 0,0010555751 (kg)\]
+
+\[ \Delta m_d = \rho_{aco} \cdot \pi \left( \Delta l_2 \cdot R_2^2 + l_2 \cdot 2 \cdot R_2 \cdot \Delta R_2 \right) \]
+\[ \Delta m_d = 8000,0 \cdot \pi \left( 0,0001 \cdot (0,0625)^2 + 0,0043 \cdot 2 \cdot 0,0625 \cdot 0,0001 \right) = 0,011168362 (kg) \]
+
+\[ \Delta m_a = \rho_{aco} \cdot \pi \left( \Delta l_1 \cdot R_1^2 + l_1 \cdot 2 \cdot R_1 \cdot \Delta R_1 \right) \]
+\[ \Delta m_a = 8000,0 \cdot \pi \left( 0,0001 \cdot (0,0702)^2 + 0,0203 \cdot 2 \cdot 0,0702 \cdot 0,0001 \right) = 0,019548648 (kg)\]
+
+Prosseguindo, podemos determinar os momentos de inércia de cada componente e consequentemente do giroscópio todo:
+
+\[I_E = \frac{1}{2} \cdot m_e \cdot R_e^2\]
+\[I_E = \frac{1}{2} \cdot 0,34789997 \cdot (0,0035)^2 = 0,0000021309 (kg \cdot m^2)\]
+
+\[I_D = \frac{1}{2} \cdot m_d \cdot (R_2^2 + R_e^2)\]
+\[I_D = \frac{1}{2} \cdot 0,4221515 \cdot [(0,0625)^2 + (0,0035)^2] = 0,0008271003 (kg \cdot m^2) \]
+
+\[I_A = \frac{1}{2} \cdot m_a \cdot (R_1^2 + R_2^2)\]
+\[I_A = \frac{1}{2} \cdot 0,302494 \cdot [(0,0702)^2 + (0,0625)^2] = 0,0013361599 (kg \cdot m^2) \]\\
+
+Propagando as incertezas:
+
+\[\Delta I_E = \frac{1}{2} \left( \Delta m_e \cdot R_e^2 + 2 \cdot R_e \cdot \Delta R_e \cdot m_e \right)\]
+\[\Delta I_E = \frac{1}{2} \left( 0,0010555751 \cdot (0,0035)^2 + 2 \cdot 0,0035 \cdot 0,00005 \cdot 0,34789997 \right)\]
+\[\Delta I_E = 0,0000000369 (kg \cdot m^2)\]
+
+\[\Delta I_D = \frac{1}{2} 
+    \left[ 
+        \Delta m_d \cdot (R_2^2 + R_e^2) + 
+        \left( 2 \cdot R_e \cdot \Delta R_e + 2 \cdot R_2 \cdot \Delta R_2 \right) \cdot m_d
+    \right]
+\]
+\[\Delta I_D = \frac{1}{2} 
+    [ 
+        0,011168362 \cdot ((0,0625)^2 + (0,0035)^2) + ( 2 \cdot 0,0035 \cdot 0,00005
+\]\[
+         + 2 \cdot 0,0625 \cdot 0,0001) \cdot 0,4221515
+    ]
+\]
+\[\Delta I_D = 0,00002459394 (kg \cdot m^2)\]
+
+\[\Delta I_A = \frac{1}{2} 
+    \left[ 
+        \Delta m_a \cdot (R_1^2 + R_2^2) + 
+        \left( 2 \cdot R_1 \cdot \Delta R_1 + 2 \cdot R_2 \cdot \Delta R_2 \right) \cdot m_a
+    \right]
+\]
+\[\Delta I_A = \frac{1}{2} 
+    [ 
+        0,019548648 \cdot ((0,0702)^2 + (0,0625)^2) + 
+        (2 \cdot 0,0702 \cdot 0,0001 
+\]\[
+        + 2 \cdot 0,0625 \cdot 0,0001) \cdot 0,302494
+    ]
+\]
+\[\Delta I_A = 0,0000903633 (kg \cdot m^2)\]\\
+
+Assim sendo, para \textit{I} teremos:
+
+\[I_T = I_E + I_D + I_A\]
+\[I_T = 0,0010555751 + 0,011168362 + 0,019548648 = 0,00216539107 (kg \cdot m^2)\]
+
+\[\Delta I_T = \Delta I_E + \Delta I_A + \Delta I_D\]
+\[\Delta I_T = 0,0000000369 + 0,00002459394 + 0,0000903633 = 0,00011499414 (kg \cdot m^2)\]
+
+Com o momento de inércia em mãos, podemos prosseguir para a próxima parte. Para isso, precisaremos dos outros dados do experimento, disponíveis na tabela abaixo:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ |M{5cm}||M{2cm}||M{2cm}||M{2cm}|  }
+        \hline
+        \textbf{O que foi medido} & \textbf{Valor} & \textbf{Incerteza} & \textbf{Unidade}\\
+        \hline
+        Tempo 1-1 (t\textsubscript{11})     & 0,072     & $\pm$ 0,001   & s\\
+        Tempo 1-2 (t\textsubscript{12})     & 0,135     & $\pm$ 0,001   & s\\
+        Tempo 1-3 (t\textsubscript{13})     & 0,194     & $\pm$ 0,001   & s\\
+        Velocidade 1 ($\omega _1$)          & 271,2     & $\pm$ 0,1     & rad/s\\
+        \hline
+        Tempo 2-1 (t\textsubscript{21})     & 0,073     & $\pm$ 0,001   & s\\
+        Tempo 2-2 (t\textsubscript{22})     & 0,138     & $\pm$ 0,001   & s\\
+        Tempo 2-3 (t\textsubscript{23})     & 0,198     & $\pm$ 0,001   & s\\
+        Velocidade 2 ($\omega _2$)          & 255,6     & $\pm$ 0,1     & rad/s\\
+        \hline
+        Tempo 3-1 (t\textsubscript{31})     & 0,076     & $\pm$ 0,001   & s\\
+        Tempo 3-2 (t\textsubscript{32})     & 0,144     & $\pm$ 0,001   & s\\
+        Tempo 3-3 (t\textsubscript{33})     & 0,206     & $\pm$ 0,001   & s\\
+        Velocidade 3 ($\omega _3$)          & 308,2     & $\pm$ 0,1     & rad/s\\
+        \hline
+        Tempo 4-1 (t\textsubscript{41})     & 0,074     & $\pm$ 0,001   & s\\
+        Tempo 4-2 (t\textsubscript{42})     & 0,142     & $\pm$ 0,001   & s\\
+        Tempo 4-3 (t\textsubscript{43})     & 0,205     & $\pm$ 0,001   & s\\
+        Velocidade 4 ($\omega _4$)          & 256,4     & $\pm$ 0,1     & rad/s\\
+        \hline
+    \end{tabular}
+    \caption{Dados experimentais do Giroscópio}
+\end{table}
+
+Finalmente podemos calcular o valor de $\Omega _e$, para isso vamos repetir a formula 4 vezes, uma para cada velocidade angular medida com o tacômetro:
+
+\[ \Omega _{E1} = \frac{MgD}{I \omega _1} \]
+\[ \Omega _{E1} = \frac{1,116 \cdot 9,80665 \cdot 0,0565}{0,00216539107 \cdot 271,2} = 1,0529489 (Hz)\]
+
+% =========================
+
+
+
+% - Calcular o momento de cada peça e o total\\
+% - Frequência estimada (4x) \\
+% \\
+% - Frequência real (4x)\\
+% - Determinar diretamente (pelo tempo) a frequência de precessão\\
+% - Comparar as frequências
