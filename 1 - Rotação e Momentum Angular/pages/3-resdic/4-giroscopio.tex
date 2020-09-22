@@ -24,7 +24,7 @@ Baseado no video disponibilizado para esse experimento os dados que temos dispon
 Assim sendo, podemos começar a calcular as massas de cada peça do giroscópio:
 
 \[ r_{eixo} = \frac{d_{eixo}}{2} \Rightarrow m_e = (2 D \pi r_{eixo}^2) \cdot \rho_{aco} \]
-\[ r_{eixo} = \frac{0,0070}{2} \Rightarrow m_e = (2 \cdot 0,0565 \cdot \pi \cdot (0,0035)^2) * 8000,0 = 0,34789997 (kg)\]
+\[ r_{eixo} = \frac{0,0070}{2} \Rightarrow m_e = (2 \cdot 0,0565 \cdot \pi \cdot (0,0035)^2) \cdot 8000,0 = 0,34789997 (kg)\]
 
 \[ m_d = (l_2 \pi R_2^2) \cdot \rho_{aco} \]
 \[ m_d = (0,0043 \pi (0,0625)^2) \cdot 8000,0 = 0,4221515 (kg) \]
@@ -101,7 +101,7 @@ Assim sendo, para \textit{I} teremos:
 \[\Delta I_T = \Delta I_E + \Delta I_A + \Delta I_D\]
 \[\Delta I_T = 0,0000000369 + 0,00002459394 + 0,0000903633 = 0,00011499414 (kg \cdot m^2)\]
 
-Com o momento de inércia em mãos, podemos prosseguir para a próxima parte. Para isso, precisaremos dos outros dados do experimento, disponíveis na tabela abaixo:
+Com o momento de inércia em mãos, podemos prosseguir para a próxima parte. Para isso, precisaremos dos outros dados do experimento, disponíveis na tabela abaixo (os valores para as velocidades angulares $\omega _i$ )
 
 \begin{table}[H]
     \centering
@@ -109,24 +109,16 @@ Com o momento de inércia em mãos, podemos prosseguir para a próxima parte. Pa
         \hline
         \textbf{O que foi medido} & \textbf{Valor} & \textbf{Incerteza} & \textbf{Unidade}\\
         \hline
-        Tempo 1-1 (t\textsubscript{11})     & 0,072     & $\pm$ 0,001   & s\\
-        Tempo 1-2 (t\textsubscript{12})     & 0,135     & $\pm$ 0,001   & s\\
-        Tempo 1-3 (t\textsubscript{13})     & 0,194     & $\pm$ 0,001   & s\\
+        Tempo 1 (t\textsubscript{1})        & 19,4      & $\pm$ 0,1     & s\\
         Velocidade 1 ($\omega _1$)          & 271,2     & $\pm$ 0,1     & rad/s\\
         \hline
-        Tempo 2-1 (t\textsubscript{21})     & 0,073     & $\pm$ 0,001   & s\\
-        Tempo 2-2 (t\textsubscript{22})     & 0,138     & $\pm$ 0,001   & s\\
-        Tempo 2-3 (t\textsubscript{23})     & 0,198     & $\pm$ 0,001   & s\\
+        Tempo 2 (t\textsubscript{2})        & 19,8      & $\pm$ 0,1     & s\\
         Velocidade 2 ($\omega _2$)          & 255,6     & $\pm$ 0,1     & rad/s\\
         \hline
-        Tempo 3-1 (t\textsubscript{31})     & 0,076     & $\pm$ 0,001   & s\\
-        Tempo 3-2 (t\textsubscript{32})     & 0,144     & $\pm$ 0,001   & s\\
-        Tempo 3-3 (t\textsubscript{33})     & 0,206     & $\pm$ 0,001   & s\\
+        Tempo 3 (t\textsubscript{3})        & 20,6      & $\pm$ 0,1     & s\\
         Velocidade 3 ($\omega _3$)          & 308,2     & $\pm$ 0,1     & rad/s\\
         \hline
-        Tempo 4-1 (t\textsubscript{41})     & 0,074     & $\pm$ 0,001   & s\\
-        Tempo 4-2 (t\textsubscript{42})     & 0,142     & $\pm$ 0,001   & s\\
-        Tempo 4-3 (t\textsubscript{43})     & 0,205     & $\pm$ 0,001   & s\\
+        Tempo 4 (t\textsubscript{4})        & 20,5      & $\pm$ 0,1     & s\\
         Velocidade 4 ($\omega _4$)          & 256,4     & $\pm$ 0,1     & rad/s\\
         \hline
     \end{tabular}
@@ -136,15 +128,93 @@ Com o momento de inércia em mãos, podemos prosseguir para a próxima parte. Pa
 Finalmente podemos calcular o valor de $\Omega _e$, para isso vamos repetir a formula 4 vezes, uma para cada velocidade angular medida com o tacômetro:
 
 \[ \Omega _{E1} = \frac{MgD}{I \omega _1} \]
-\[ \Omega _{E1} = \frac{1,116 \cdot 9,80665 \cdot 0,0565}{0,00216539107 \cdot 271,2} = 1,0529489 (Hz)\]
+\[ \Omega _{E1} = \frac{1,116 \cdot 9,80665 \cdot 0,0565}{0,00216539107 \cdot 271,2} = \frac{0,618348509}{0,857254058} = 1,05294889 (rad/s)\]
 
-% =========================
+\[ \Omega _{E2} = \frac{MgD}{I \omega _2} \]
+\[ \Omega _{E2} = \frac{1,116 \cdot 9,80665 \cdot 0,0565}{0,00216539107 \cdot 255,6} = \frac{0,618348509}{0,553473958} = 1,11721377 (rad/s)\]
 
+\[ \Omega _{E3} = \frac{MgD}{I \omega _3} \]
+\[ \Omega _{E3} = \frac{1,116 \cdot 9,80665 \cdot 0,0565}{0,00216539107 \cdot 308,2} = \frac{0,618348509}{0,667373528} = 0,926654036 (rad/s)\]
 
+\[ \Omega _{E4} = \frac{MgD}{I \omega _4} \]
+\[ \Omega _{E4} = \frac{1,116 \cdot 9,80665 \cdot 0,0565}{0,00216539107 \cdot 256,4} = \frac{0,618348509}{0,555206270} = 1,11372753 (rad/s)\]
 
-% - Calcular o momento de cada peça e o total\\
-% - Frequência estimada (4x) \\
-% \\
-% - Frequência real (4x)\\
-% - Determinar diretamente (pelo tempo) a frequência de precessão\\
-% - Comparar as frequências
+Então, a média dos valores de $\Omega _E$ obtidos experimentalmente é:
+
+\[ \overline{\Omega _E} = \frac{\Omega _{E1} + \Omega _{E2} + \Omega _{E3} + \Omega _{E4}}{4} \]
+\[ \overline{\Omega _E} = \frac{1,05294889 + 1,11721377 + 0,926654036 + 1,11372753}{4} = 1,052636055 (rad/s) \]
+
+Dessa forma, podemos propagar as incertezas pelo método do desvio padrão:
+
+\[ \Delta \overline{\Omega _E} = \sqrt{\frac{\sum_{i=1}^{4} (\Omega _{Ei} - \overline{\Omega _E})^2}{4}}\]
+\[ \Delta \overline{\Omega _E} = \sqrt{\frac{0.251651305}{4}} = 0.250824294 (rad/s)\]
+
+Ajustando os valores, teremos então que:
+
+\[ \therefore \mathbf{\Omega _E = 1,1 \pm 0,3 (rad/s)}\]
+
+Agora na segunda parte desse experimento, vamos utilizar os valores de tempo $t_i$ para determinar o $\Omega _d$:
+
+\[ \Omega _{D1} = \frac{6 \pi}{t_1} = \frac{6 \pi}{19,4} = 0,9716265939 (rad/s)\]
+
+\[ \Omega _{D2} = \frac{6 \pi}{t_2} = \frac{6 \pi}{19,8} = 0,9519977738 (rad/s)\]
+
+\[ \Omega _{D3} = \frac{6 \pi}{t_3} = \frac{6 \pi}{20,6} = 0,9150269865 (rad/s)\]
+
+\[ \Omega _{D4} = \frac{6 \pi}{t_4} = \frac{6 \pi}{20,5} = 0,9194905328 (rad/s)\]
+
+Fazendo a média desses valores:
+
+\[ \overline{\Omega _D} = \frac{\Omega _{D1} + \Omega _{D2} + \Omega _{D3} + \Omega _{D4}}{4} \]
+\[ \overline{\Omega _D} = \frac{0,9716265939 + 0,9519977738 + 0,9150269865 + 0,9194905328}{4} = 0,93953547175 (rad/s) \]
+
+E de forma análoga ao anterior, propagaremos as incertezas pelo utilizando o desvio padrão:
+
+\[ \Delta \overline{\Omega _D} = \sqrt{\frac{\sum_{i=1}^{4} (\Omega _{Di} - \overline{\Omega _D})^2}{4}}\]
+\[ \Delta \overline{\Omega _D} = \sqrt{\frac{0.058045566}{4}} = 0.120463238 (rad/s)\]
+
+Ajustando teremos:
+
+\[ \therefore \mathbf{\Omega _D = 0,9 \pm 0,1 (rad/s)}\]
+
+Para analisar esses valores, vamos utilizar a mesma desigualdade emprega no experimento 1, ou seja, o absoluto da diferença entre $\Omega _E$ e $\Omega _D$ deve ser menor que o dobro da soma das suas respectivas incertezas:
+
+\[ | 1,1 - 0,9 | < 2 \cdot (0,3 + 0,1) \]
+\[ \mathbf{0,2 < 0,8 \Rightarrow VERDADEIRO} \]
+
+Ou seja, os valores encontrados para a frequência de precessão do giroscópio foram \textbf{compatíveis experimentalmente}! Isso quer dizer que o nosso modelo matemático foi observado com uma certa exatidão na prática.
+
+Alguns fatores como o atrito do eixo do giroscópio com a base de rotação, o arraste do ar fazendo a roda diminuir sua velocidade e mais importante, a dificuldade de pesar com exatidão cada componente para determinar o momento de inércia são alguns fatores que diminuíram a nossa precisão no resultado, mas mesmo assim não atrapalharam muito, indicando que fomos bem criteriosos na montagem e realização do experimento.
+
+% E as incertezas para cada item (como o numerador N não varia, só precisamos calculá-lo uma vez):
+
+% \[ \Delta N = g \cdot (M \cdot \Delta D + \Delta M \cdot D) \]
+% \[ \Delta N = 9,80665 \cdot (1,116 \cdot 0,0001 + 0,001 \cdot 0,0565) = 0,0016484978\]
+
+% \[ \Delta D_1 = \Delta I \cdot \omega _1 + I \cdot \Delta \omega _1\]
+% \[ \Delta D_1 = (0,00011499414 \cdot 271,2) + (0,00216539107 \cdot 0,1) = 0,0314029499 \]
+
+% \[ \Delta \Omega _{E1} = g \cdot \frac{(\Delta N \cdot D_1) + (N \cdot \Delta D_1)}{D_1^2} \]
+% \[ \Delta \Omega _{E1} = 9,80665 \cdot \frac{(0,0016484978 \cdot 0,857254058) + (0,618348509 \cdot 0,0314029499)}{0,857254058^2} \]
+% \[ \Delta \Omega _{E1} = 0,277798080 (rad/s) \]
+
+% \[ \Delta D_2 = \Delta I \cdot \omega _2 + I \cdot \Delta \omega _2\]
+% \[ \Delta D_2 = (0,00011499414 \cdot 255,6) + (0,00216539107 \cdot 0,1) = 0,029609041 \]
+
+% \[ \Delta \Omega _{E2} = g \cdot \frac{(\Delta N \cdot D_2) + (N \cdot \Delta D_2)}{D_2^2} \]
+% \[ \Delta \Omega _{E2} = 9,80665 \cdot \frac{(0,0016484978 \cdot 0,553473958) + (0,618348509 \cdot 0,029609041)}{0,553473958^2} \]
+% \[ \Delta \Omega _{E2} = 0,615391973 (rad/s) \]
+
+% \[ \Delta D_3 = \Delta I \cdot \omega _3 + I \cdot \Delta \omega _3\]
+% \[ \Delta D_3 = (0,00011499414 \cdot 308,2) + (0,00216539107 \cdot 0,1) = 0,035657733 \]
+
+% \[ \Delta \Omega _{E3} = g \cdot \frac{(\Delta N \cdot D_3) + (N \cdot \Delta D_3)}{D_3^2} \]
+% \[ \Delta \Omega _{E3} = 9,80665 \cdot \frac{(0,0016484978 \cdot 0,667373528) + (0,618348509 \cdot 0,035657733)}{0,667373528^2} \]
+% \[ \Delta \Omega _{E3} = 0,5937280747 (rad/s) \]
+
+% \[ \Delta D_4 = \Delta I \cdot \omega _4 + I \cdot \Delta \omega _4\]
+% \[ \Delta D_4 = (0,00011499414 \cdot 256,4) + (0,00216539107 \cdot 0,1) = 0,029701037 \]
+
+% \[ \Delta \Omega _{E4} = g \cdot \frac{(\Delta N \cdot D_4) + (N \cdot \Delta D_4)}{D_4^2} \]
+% \[ \Delta \Omega _{E4} = 9,80665 \cdot \frac{(0,0016484978 \cdot 0,555206270) + (0,618348509 \cdot 0,029701037)}{0,555206270^2} \]
+% \[ \Delta \Omega _{E4} = 0,613391965 (rad/s) \]

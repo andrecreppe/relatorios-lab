@@ -275,4 +275,27 @@ Podemos sintetizar todos os dados relevantes desse experimento na seguinte Tabel
     \caption{Valores obtidos no experimento de Choque Rotacional.}
 \end{table}
 
-Comparando o valor obtido para o momento de Inércia da peça 1 ($I_1 = 0,0061 \pm 0,0005$) com os valores obtidos a partir das características geométricas e do experimento com a roda de Maxwell ($I_1 = 0,00540 \pm 0,00005$ e $I_F = 0,00497 \pm 0,00002$), podemos observar que 
+Comparando o valor obtido para o momento de Inércia da peça 1 ($I_1 = 0,0061 \pm 0,0005$) com os valores obtidos a partir das características geométricas e do experimento com a roda de Maxwell ($I_1 = 0,00540 \pm 0,00005$ e $I_F = 0,00497 \pm 0,00002$), podemos observar que há uma relação de equivalência que pode ser comprovada pela seguinte relação:
+
+\[|x_1 - x_2| < 2 \cdot (\sigma_1 + \sigma_2) \longrightarrow Equivalente\]
+\[|x_1 - x_2| > 3 \cdot (\sigma_1 + \sigma_2) \longrightarrow Discordante\]
+
+Então, temos entre os Momentos de Inércia da peça 1($I_1$) dos dois experimentos:
+
+\[|0,0061 - 0,00540| < 2 \cdot (0,0005 + 0,00005)\]
+\[|0,0007| < 2 \cdot (0,00055)\]
+\[|0,0007| < 0,0011\]
+
+Portanto, os valores $I_1 = 0,0061 \pm 0,0005$ e $I_1 = 0,00540 \pm 0,00005$ são equivalentes.
+
+\[|0,0061 - 0,00497| < 2 \cdot (0,0005 + 0,00002)\]
+\[|0,00113| < 2 \cdot (0,00052)\]
+\[|0,00113| < 0,00104 \longrightarrow Falso\]
+
+\[|0,0061 - 0,00497| > 3 \cdot (0,0005 + 0,00002)\]
+\[|0,00113| > 3 \cdot (0,00052)\]
+\[|0,00113| > 0,00156 \longrightarrow Falso\]
+
+Portanto, como os valores $I_1 = 0,0061 \pm 0,0005$ e $I_F = 0,00497 \pm 0,00002$ não atendem a nenhuma das duas situações, concluímos que a comparação desses dois dados não é suficientemente conclusivo para afirmar se há ou não equivalência entre as medidas.
+
+Com base nesses dados, podemos apontar a confiabilidade dos métodos de obtenção do Momento de Inércia da peça 1, sendo que chegamos a uma relação de equivalência entre o método do Choque Rotacional e da medida obtida diretamente pelas características geométricas da peça. Isso torna o método do Choque Rotacional confiável para a obtenção do momento de inércia de uma peça, tendo como principal vantagem o fato de utilizar uma outra peça com geometrias mais simples para a obtenção do momento de inércia de uma peça mais complexa. Entretanto, pode-se apontar como desvantagem a utilização de um software para a obtenção das velocidades angulares, o que torna o método menos acessível. 
