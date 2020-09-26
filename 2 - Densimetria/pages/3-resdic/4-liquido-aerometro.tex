@@ -1,4 +1,47 @@
 \subsection{Determinação da densidade de um líquido utilizando o
 Areômetro de Nicholson}
 
-Creppe
+Para os nossos cálculos, utilizaremos os seguintes dados que foram disponibilizados no vídeo da aula, em conjunto com um valor da densidade da água encontrado online:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ |M{5cm}||M{2cm}||M{2cm}||M{2cm}|  }
+        \hline
+        \textbf{O que foi medido} & \textbf{Valor} & \textbf{Incerteza} & \textbf{Unidade}\\
+        \hline
+        Massa Aerômetro + Pesos ($m_{ar} + m_{pa}$)         & 135,96    & $\pm$ 0,01 & g\\
+        Massa dos Pesos na água ($m_t$)                     & 34,30     & $\pm$ 0,01 & g\\
+        Massa dos Pesos no líquido desconhecido ($m_t'$)    & 52,21     & $\pm$ 0,01 & g\\
+        \hline
+        Densidade da água a 25°C ($\rho _{agua}$)           & 0,9970479 & - & g/$cm^3$\\
+        \hline
+    \end{tabular}
+    \caption{Dados coletados para o experimento de aferição da densidade}
+\end{table}
+
+Assim sendo, podemos começar os cálculos. Primeiro vamos determinar o volume do aerômetro:
+
+\[ V_{ar} = \frac{m_{ar} + m_t}{\rho _{agua}} \]
+\[ V_{ar} = \frac{135,96}{0,9970479} = 136,3625559 (cm^3) \]
+
+\[ \delta V_{ar} = \frac{\delta m_{ar} + \delta m_t}{\rho _{agua}} \]
+\[ \delta V_{ar} = \frac{0,01 + 0,01}{0,9970479} = 0,020059216 (cm^3) \]
+
+Com esse dado em mãos, conseguiremos assim determinar a densidade do fluido desconhecido:
+
+\[ \rho _x = \rho _{agua} + \frac{m_t - m_t'}{V_{ar}} \]
+\[ \rho _x = 0,9970479 + \frac{34,30 - 52,21}{136,3625559} = 0,8657068593 (g/cm^3) \]
+
+\[ \delta \rho _x = \rho _{agua} \cdot \frac{(\delta m_t + \delta m_t') \cdot V_{ar} + \delta V_{ar} \cdot (m_t - m_t')}{V_{ar}^2} \]
+\[ \delta \rho _x = 0,9970479 \cdot \frac{(0,01 + 0,01) \cdot 136,3625559 + 0,020059216 \cdot (34,30 - 52,21)}{136,3625559^2} \]
+\[ \delta \rho _x = 0,0001269713 (g/cm^3) \]
+
+Dessa forma, ajustando os algarismos significativos teremos que a densidade do fluido desconhecido é:
+
+\[ \mathbf{\rho _x = 0,8657 \pm 0,0001 (g/cm^3)} \]
+
+Comparando esse resultado com uma tabela online, podemos dizer que o líquido transparente com a densidade mais próxima do nosso resultado seria o \textit{benzeno} ($\rho _{benzeno} = 0.876 g/cm^3$).\\
+
+Entretanto, como o vídeo deixou uma dica sobre o que estava dentro da proveta, uma garrafa de álcool de limpeza. Ou seja, éramos para ter encontrado um valor próximo da densidade específica do etanol ($\rho _{etanol} = 0.787 g/cm^3$), portanto o nosso valor encontrado \textbf{não foi compatível com o esperado}.\\
+
+% Um dos motivos que pode ter levado a esse resultado inesperado é o fato de que não foi medida a temperatura do laboratório.
