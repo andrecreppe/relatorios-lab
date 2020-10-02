@@ -1,4 +1,50 @@
 \subsection{Determinação do volume e da densidade de um sólido com
 uma balança}
 
-Maia
+Conforme descrito na Metodologia, os primeiros dados registrados foram as massas do sistema recipiente-líquido ($m_{r+l}$) e do sistema recipiente-líquido com o sólido submerso  ($m'_{r+l}$), que estão registrados na Tabela abaixo com suas respectivas incertezas inerentes ao método de aferição utilizado:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ |M{5cm}||M{2cm}||M{2cm}||M{2cm}|  }
+        \hline
+        \textbf{O que foi medido} & \textbf{Valor} & \textbf{Incerteza} & \textbf{Unidade}\\
+        \hline
+        Recipiente-Líquido ($m_{r+l}$)         & 83,70    & $\pm$ 0,01 & g\\
+        Recipiente-Líquido com Sólido Submerso ($m'_{r+l}$)                     & 86,23     & $\pm$ 0,01 & g\\
+        Densidade da água a 25°C ($\rho _{agua}$)           & 1,000 & - & g/$cm^3$\\
+        \hline
+    \end{tabular}
+    \caption{Massas do sistema recipiente-líquido ($m_{r+l}$) e do sistema recipiente-líquido com o sólido submerso  ($m'_{r+l}$).}
+\end{table}
+
+Com estes valores em mãos, calculamos o volume do sólido por meio da fórmula já enunciada anteriormente:
+
+\[ V_s = m'_{r+l} - m_{r+l} \]
+\[ V_s = 86,23 - 83,70 \]
+\[ V_s = 2,53 cm^3 \]
+
+A partir dos valores das massas e de suas respectivas incertezas, podemos determinar a incerteza final do volume encontrado para o sólido. Dessa forma, temos que a incerteza associada ao valor pode ser encontrada pela expressão a seguir:
+
+\[ \sigma_s = \sigma_m - \sigma_{m'} \]
+\[ \sigma_s = 0,01 + 0,01 \]
+\[ \sigma_s = 0,02 cm^3 \]
+
+Portanto, este é o volume do sólido em questão. Agora, resta calcular a densidade e para isso é necessário conhecer a massa do sólido submerso. Após a leitura da balança, a massa do sólido é: $m_{solido}$ = (21,52 $\pm$ 0,01) g. Em seguida, calculamos a densidade do sólido e sua incerteza utilizando as fórmulas: 
+
+\[\rho_{solido} = \frac{m_{solido}}{V_s} \]
+\[\rho_{solido} = \frac{21,53}{2,53} \]
+\[\rho_{solido} = 8,505928 g/cm^3 \]
+
+\[ \sigma_s = \frac{m \cdot \delta V + V \cdot \delta m}{V^2} = \frac{21,52 \cdot 0,02 + 2,53 \cdot 0,01}{2,53^2} = \frac{0,4304 + 0,0253}{6,4009}\]
+\[ \sigma_s = \frac{0,4557}{6,4009} = 0,071193\]
+
+\[\therefore \rho_{solido} = (8,50 \pm 0,07) g/cm^3 \]
+
+Após o cálculo, comparamos a densidade com o valor tabelado e chegamos à conclusão de que o sólido é feito de latão.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{images/Gráfico Densidades 2.png}
+    \text{Densidade $(g/cm^3)$}
+    \caption{Gráfico de distribuição de valores da densidade experimental }
+\end{figure}

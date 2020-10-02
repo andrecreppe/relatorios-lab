@@ -1,4 +1,67 @@
 \subsection{Determinação do volume e da densidade de um sólido
 utilizando um Areômetro de Nicholson}
 
-Judá
+Para calcularmos o volume e a densidade do nosso sólido, vamos usar os valores fornecidos pela videoaula, juntamente com o valor da densidade da água - disponibilizado na apostila :
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ |M{6cm}||M{2cm}||M{2cm}||M{2cm}|  }
+        \hline
+        \textbf{O que foi medido} & \textbf{Valor} & \textbf{Incerteza} & \textbf{Unidade}\\
+        \hline
+        
+        Massa do sólido a ser analisado ($m_s$)         & 21,44    & $\pm$ 0,01 & g\\
+        
+        Massa adicionada - sólido no prato superior ($m_a$)                     & 12,87     & $\pm$ 0,01 & g\\
+        
+        Massa adicionada - sólido no prato inferior ($m_a'$)    & 15,36     & $\pm$ 0,01 & g\\
+        \hline
+        
+        Densidade da água a 25°C - valor tabelado  ($\rho _{agua}$)           & 1,000 & - & g/$cm^3$\\
+        \hline
+    \end{tabular}
+    \caption{Dados coletados para o experimento de determinação do volume e da densidade de um sólido}
+\end{table}
+
+Então, com os dados aquistados, podemos iniciar os cálculos. Inicialmente vamos calcular o volume do sólido e sua incerteza:
+
+\[ V_{s} = \frac{m_{a}' - m_a}{\rho _{L}} = \frac{m_{a}' - m_a}{\rho _{agua}}\]
+\[ V_{s} = \frac{15,36 - 12,87}{1,000} = 2,49 cm^3 \]
+
+\[ \delta V_s = \frac{\delta m_{a}' + \delta m_a}{\rho _{agua}} \]
+\[ \delta V_s = \frac{0,01 + 0,01}{1} = 0,02 cm^3 \]
+
+Sendo assim, determinamos o volume:
+
+\[\mathbf{\therefore V_s = 2,49 \pm 0,02 cm^3} \]
+
+Agora, podemos calcular a densidade do sólido e sua incerteza:
+
+\[ \rho _s = \frac{m_s}{V_s} \]
+\[ \rho _s = \frac{21,44}{2,49} = 8,610441767 g/cm^3 \]
+
+\[ \delta \rho _s =  \frac{(m_s \cdot \delta V_s) + (V_s \cdot \delta m_s)}{V_s^2} \]
+\[ \delta \rho _s =  \frac{(21,44 \cdot 0.02) + (2,49 \cdot 0,01)}{(2,49)^2} = 0,073176239  g/cm^3\] 
+
+Ajustando os algarismos significativos, encontraremos a densidade do sólido em questão:
+
+\[\mathbf{\therefore \rho _s = 8,61 \pm 0,07 g/cm^3} \]
+
+Desse modo, ao determinarmos a densidade do sólido ($\rho _s$), pudemos compará-lo com a \textit{Tabela 2.1 - "Densidade de alguns materiais"} da página 39 da Apostila de Laboratório, e concluímos que o sólido era feito do material \textbf{Latão}, que apresenta densidade 
+$\rho _l$ = 8,56 g/cm3 . 
+Podemos afirmar que o nosso sólido é de latão, pois o resultado experimental da densidade do sólido ($\rho _s$) é \textbf{compatível} com o valor da densidade do Latão ($\rho _l$).\\
+Podemos demonstrar com um gráfico de distribuição:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{images/Gráfico Densidades 1.png}
+    \text{Densidade $(g/cm^3)$}
+    \caption{Gráfico de distribuição de valores da densidade experimental}
+\end{figure}
+
+Densidade experimental:  $\rho _s = 8,61 \pm 0,07 g/cm^3$\\
+
+Densidade tabelada do Latão: $\rho_l = 8,56 g/cm^3$\\
+
+
+Assim, vemos que a densidade do latão está contida no intervalo da incerteza da densidade calculada no experimento, comprovando a compatibilidade supracitada.\\
