@@ -16,7 +16,7 @@ Para os nossos cálculos, utilizaremos os seguintes dados que foram disponibiliz
         Densidade da água a 25°C ($\rho _{agua}$)           & 1,000 & - & g/$cm^3$\\
         \hline
     \end{tabular}
-    \caption{Dados coletados para o experimento de aferição da densidade}
+    \caption{Dados coletados para o experimento da determinação da densidade de um líquido}
 \end{table}
 
 Assim sendo, podemos começar os cálculos. Primeiro vamos determinar o volume do aerômetro:
@@ -29,19 +29,25 @@ Assim sendo, podemos começar os cálculos. Primeiro vamos determinar o volume d
 
 Com esse dado em mãos, conseguiremos assim determinar a densidade do fluido desconhecido:
 
-\[ \rho _x = \rho _{agua} + \frac{m_t - m_t'}{V_{ar}} \]
-\[ \rho _x = 1,000 + \frac{34,30 - 52,21}{135,96} = 0,868270078 (g/cm^3) \]
+\[ \rho _x = \rho _{agua} + \frac{m_t' - m_t}{V_{ar}} \]
+\[ \rho _x = 1,000 + \frac{52,21 - 34,30}{135,96} = 1,1317299 (g/cm^3) \]
 
-\[ \delta \rho _x = \rho _{agua} \cdot \frac{(\delta m_t + \delta m_t') \cdot V_{ar} + \delta V_{ar} \cdot (m_t - m_t')}{V_{ar}^2} \]
-\[ \delta \rho _x = 1,000 \cdot \frac{(0,01 + 0,01) \cdot 135,96 + 0,02 \cdot (34,30 - 52,21)}{135,96^2} \]
-\[ \delta \rho _x = 0,00012772434 (g/cm^3) \]
+\[ \delta \rho _x = \rho _{agua} \cdot \frac{(\delta m_t' + \delta m_t) \cdot V_{ar} + \delta V_{ar} \cdot (m_t' - m_t)}{V_{ar}^2} \]
+\[ \delta \rho _x = 1,000 \cdot \frac{(0,01 + 0,01) \cdot 135,96 + 0,02 \cdot (52,21 - 34,30)}{135,96^2} \]
+\[ \delta \rho _x = 0,0003408796 (g/cm^3) \]
 
 Dessa forma, ajustando os algarismos significativos teremos que a densidade do fluido desconhecido é:
 
-\[ \mathbf{\therefore \rho _x = 0,8683 \pm 0,0001 (g/cm^3)} \]
+\[ \mathbf{\therefore \rho _x = 1,1317 \pm 0,0003 (g/cm^3)} \]
 
-Comparando esse resultado com uma tabela online, podemos dizer que o líquido transparente com a densidade mais próxima do nosso resultado seria o \textit{benzeno} ($\rho _{benzeno} = 0.876 g/cm^3$).\\
+Comparando esse resultado com uma tabela online, podemos dizer que o líquido transparente com a densidade mais próxima do nosso resultado seria a da água proveniente do \textit{mar morto} ($\rho _{mar-morto} \approx 1,240 g/cm^3$).\\
 
-Entretanto, como o vídeo deixou uma dica sobre o que estava dentro da proveta, uma garrafa de álcool de limpeza. Ou seja, era para termos encontrado um valor próximo da densidade específica do etanol ($\rho _{etanol} = 0.789 g/cm^3$), portanto o nosso valor encontrado \textbf{não foi compatível com o esperado}.\\
+Se o líquido que foi pesado realmente tivesse a densidade do mar morto, podemos dizer que o nosso resultado \textbf{não foi compatível com o esperado}, uma vez que o intervalo do nosso resultado não engloba o valor da densidade encontrada online. Mas como não foi especificado pelo vídeo, não podemos afirmar isso com certeza.\\
 
-Provavelmente ocorreram alguns problemas com o experimento. Talvez o álcool tenha evaporado consideravelmente, aumentando a concentração de água nele, levando a um aumento da densidade. Ou ainda, seja uma característica do álcool 70, que possui 30\% de água, e essa quantidade leva naturalmente a densidade ser diferente da do álcool puro ($\rho _{etanol}$).
+Além disso, foi comentado no vídeo que o Aerômetro não é um bom equipamento para medir densidade de líquidos, uma vez que ele apresenta uma precisão menor do que para medir sólidos. Isso pode ser outro fator que somou no nosso resultado e fez com que ele desviasse do esperado.
+
+% Entretanto, o vídeo deixou uma dica sobre o que estava dentro da proveta: uma garrafa de álcool de limpeza. Ou seja, era para termos encontrado um valor próximo da densidade específica do etanol ($\rho _{etanol} = 0.789 g/cm^3$), portanto o valor encontrado \textbf{não foi compatível com o esperado}, uma vez que o intervalo do nosso resultado não o engloba.\\
+
+% Provavelmente ocorreram alguns problemas com o experimento. Talvez o álcool tenha evaporado consideravelmente, aumentando a concentração de água nele, levando a um aumento da densidade. Ou ainda, seja uma característica do álcool 70, que possui 30\% de água, e essa quantidade leva naturalmente a densidade ser diferente da do álcool puro ($\rho _{etanol}$).\\
+
+% Além desses detalhes técnicos, foi comentado no vídeo que o Aerômetro não é um bom equipamento para medir densidade de líquidos, uma vez que ele apresenta uma precisão menor do que para medir sólidos. Isso pode ser outro fator que somou no nosso resultado e fez com que ele desviasse do esperado.
