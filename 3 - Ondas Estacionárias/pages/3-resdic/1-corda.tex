@@ -1,3 +1,119 @@
 \subsection{Ondas estacionárias na corda}
 
-aaaaaaaaaaaaaa
+Primeiramente, o experimento foi montado pelos responsáveis do laboratório e disponibilizados por meio das gravações de vídeo. Assim sendo, nos pudermos obter os seguintes dados:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ |c||c||c||c|  }
+        \hline
+        \textbf{O que foi medido} & \textbf{Valor} & \textbf{Incerteza} & \textbf{Unidade}\\
+        \hline 
+         Massa do Peso ($m_p$)          &    0,06069    &	0,00001 & kg\\
+         Massa da Corda ($m_c$)         &    0,00553    &	0,00001 & kg\\
+         Comprimento total ($L_t$)      &    22,97      &	0,01 & m\\
+         Comprimento utilizado ($L$)    &    1,36       &	0,01 & m\\
+        \hline
+    \end{tabular}
+    \caption{Dados físicos e dimensões do experimento 1} 
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ |c||c||c|  }
+        \hline
+        \textbf{Índice do harmônico (\textit{n})} & \textbf{Frequência \textit{$f_n$}(Hz)} & \textbf{Incerteza}\\
+        \hline 
+         1 &    18,0 &	0,1\\
+         2 &	36,4 &	0,1\\
+         3 &	54,8 &	0,1\\
+         4 &	73,2 &	0,1\\
+         5 &	91,4 &	0,1\\
+        \hline
+    \end{tabular}
+    \caption{Frequências registradas e os seus respectivos índices de harmônicos para a corda em estudo} 
+\end{table}
+
+Com os dados em mãos podemos sair calculando. O primeiro passo é determinar os valores de $\lambda_n$:
+
+\[ \lambda_1 = \frac{2 \cdot L_c}{1} \]
+\[ \lambda_1 = \frac{2 \cdot 1,36}{1} = 2,72 m \]
+
+\[ \delta \lambda_1 = \frac{2}{1} \cdot \delta L_c \]
+\[ \delta \lambda_1 = \frac{2}{1} \cdot 0,01 = 0,02 m\]
+
+Repetindo esses passos teremos:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ c|c  }
+         $\lambda_2 = \frac{2}{2} \cdot 1,36 = 1,36 (m)$ & $\lambda_3 = \frac{2}{3} \cdot 1,36 = 0,9066667 (m)$\\
+         \\
+         $\delta \lambda_2 = \frac{2}{2} \cdot 0,01 = 0,01 (m)$ & $\delta \lambda_3 = \frac{2}{3} \cdot 0,01 = 0,0066667 (m)$\\
+         \\
+         \hline
+         \\
+         $\lambda_4 = \frac{2}{4} \cdot 1,36 = 0,68 (m)$ & $\lambda_5 = \frac{2}{5} \cdot 1,36 = 0,544 (m)$\\
+         \\
+         $\delta \lambda_4 = \frac{2}{4} \cdot 0,01 = 0,005 (m)$ & $\delta \lambda_5 = \frac{2}{5} \cdot 0,01 = 0,004 (m)$\\
+    \end{tabular}
+\end{table}
+
+Dessa forma, podemos então encontrar as velocidades de propagação para cada harmônico:
+
+\[ v_1 = \lambda_1 \cdot f_1 \]
+\[ v_1 = 2,72 \cdot 18,8 = 51,136 (m/s) \]
+
+\[ \delta v_1 = (\delta \lambda_1 \cdot f_1) + (\lambda_1 \cdot \delta f_1) \]
+\[ \delta v_1 = (0,02 \cdot 18,8) + (2,72 \cdot 0,1) = 0,648 (m/s) \]
+
+Repetindo esses passos teremos:
+
+\[ v_2 = 1,36 \cdot 36,4 = 49,504 (m/s) \]
+\[ \delta v_2 = (0,01 \cdot 36,4) + (1,36 \cdot 0,1) = 0,5 (m/s) \]
+
+\[ v_3 = 0,906667 \cdot 54,8 = 49,68536 (m/s) \]
+\[ \delta v_3 = (0,006667 \cdot 54,8) + (0,906667 \cdot 0,1) = 0,4560 (m/s) \]
+
+\[ v_4 = 0,68 \cdot 73,2 = 49,776 (m/s) \]
+\[ \delta v_4 = (0,005 \cdot 73,2) + (0,68 \cdot 0,1) = 0,434 (m/s) \]
+
+\[ v_5 = 0,544 \cdot 91,4 = 49,7216 (m/s) \]
+\[ \delta v_5 = (0,004 \cdot 91,4) + (0,544 \cdot 0,1) = 0,42 (m/s) \]
+
+Como podemos ver pelos resultados acima, a velocidade se manteve relativamente constante, pois os valores se mantiveram bem próximos um do outro. Isso é um bom indicativo que o nosso experimento e cálculos estão, muito provavelmente, sendo feitos da forma certa. Prosseguindo, podemos determinar a velocidade média:
+
+\[ v_m = \frac{\sum_{n=1}^{5} v_n}{5} = 49,964592 (m/s)\]
+\[ \delta v_m = \frac{\sum_{n=1}^{5} \delta v_m}{5} = 0,4916 (m/s) \]
+
+Por fim, podemos calcular finalmente a densidade linear da nossa corda:
+
+\[ \mu_e = \frac{m_p \cdot g}{v_m^2} \]
+\[ \mu_e = \frac{0,06069 \cdot 9,80665}{(49,964592)^2} = 0,0002384038 (kg/m) \]
+
+\[ \delta \mu_e = \frac{(\delta m_p \cdot g \cdot v_m^2) + (m_p \cdot g \cdot 2 \cdot v_m \cdot \delta v_m)}{(v_m)^4} \]
+\[ \delta \mu_e = \frac{(0,00001 \cdot 9,80665 \cdot (49,964592)^2) + (0,06069 \cdot 9,80665 \cdot 2 \cdot 49,964592 \cdot 0,4916)}{(49,964592)^4} \]
+\[ \delta \mu_e = 0,000004730576 (kg/m) \]
+
+Portanto, ajustando as incertezas, temos que a densidade linear experimental da corda é:
+
+\[ \mathbf{\therefore \mu_e = 0,000238 \pm 0,000005 (kg/m)} \]
+
+Com esse dado em mãos, podemos partir para a segunda parte do experimento que é a determinação dessa densidade mas de forma direta. Para isso podemos utilizar a seguinte fórmula:
+
+\[ \mu_d = \frac{m_c}{L_t} \]
+\[ \mu_d = \frac{0,00553}{22,97} = 0,00023204179 (kg/m) \]
+
+\[ \delta \mu_d = \frac{(\delta m_c \cdot L_t) + (m_c \cdot \delta L_t)}{(L_t)^2} \]
+\[ \delta \mu_d = \frac{(0,00001 \cdot 22,97) + (0,00553 \cdot 0,01)}{(22,97)^2} = 0,00000054016 (kg/m) \]
+
+Então, ajustando mais uma vez as incertezas teremos que a densidade linear direta é:
+
+\[ \mathbf{\therefore \mu_d = 0,0002320 \pm 0,0000005 (kg/m)} \]
+
+Com os dois resultados em mãos, podemos compará-los. Sabemos que para que dois valores possam ser compatíveis experimentalmente, o módulo da diferença entre eles não pode ser maior que duas vezes a soma das incertezas:
+
+\[ |\mu_e - \mu_d| < 2 \cdot (\delta \mu_e + \delta \mu_d) \]
+\[ |0,000238 - 0,0002320| < 2 \cdot (0,000005 + 0,0000005) \]
+\[ \mathbf{0,000006 < 0,000011 \xrightarrow{} VERDADEIRO} \]
+
+Como pudemos ver pela desigualdade acima, os valores encontrados foram \textbf{compatíveis experimentalmente}! Isso quer dizer que os dados obtidos a partir de contas envolvendo os harmônicos estão corretos e são verdade, pois se equiparam aos das medidas diretas.

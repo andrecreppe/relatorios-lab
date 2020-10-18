@@ -4,10 +4,10 @@ função do comprimento L}
 Neste experimento, a frequência de excitação $f$ foi fixada em aproximadamente 2 KHz (mais precisamente 2,0004 KHz com precisão de 0,0001 KHz) e os harmônicos foram gerados com a variação do comprimento L da coluna de ar. Ao deslocar o pistão, observou-se que em certas posições $L_n$, as ondas de pressão atingiram intensidades máximas. Quando isso acontecia, registrava-se a posição do pistão. Após 5 leituras, construímos a seguinte tabela com os dados:
 
 \begin{table}[H]
-    
-    \begin{tabular}{ |c||c||c|  }
+    \centering
+    \begin{tabular}{ |c||c||c|}
         \hline
-        \textbf{Índice do harmônico \textit{n}} & \textbf{Comprimento da Coluna de Ar \textit{$L_n$}(m)} & \textbf{$L_{n+1} - L_n$ (m)}\\
+        \textbf{Índice harmônico \textit{n}} & \textbf{Comprimento Coluna de Ar \textit{$L_n$}(m)} & \textbf{$L_{n+1} - L_n$ (m)}\\
         \hline 
          1&	0,080&	----	\\
          
@@ -83,4 +83,26 @@ Dando prosseguimento ao experimento, também calculamos a velocidade de propaga�
 \[ v = (0,167 \pm 0,003) \cdot (2000,4 \pm \Delta 0,1)\]
 \[ \therefore v = (334 \pm 6) m/s\]
 
-Frente a velocidade calculada, pode-se concluir que esta é, dentro da sua margem de erro, correspondente a velocidade de referência da propagação do som no ar (340m/s).
+Frente a velocidade calculada, pode-se concluir que esta é, dentro da sua margem de erro, não correspondente a velocidade de referência da propagação do som no ar (343m/s). Essa não correspondência pode ser atribuída a uma diferença mínima entre os valores gerada por erros sistemáticos ao longo do experimento, como leitura incorreta da régua ou pequenas dispersões de dados. Entretanto, para efeito experimental, por chegarmos a um valor muito próximo da referência, podemos afirmar que o resultado é satisfatório.\\
+
+Para complementar, além dos cálculos realizados, também podemos encontrar a velocidade do som no ar para o experimento a partir de uma análise gráfica que relaciona o comprimento L em função do quociente $n/2L$. Semelhante ao experimento anterior, se aplicarmos o método dos mínimos quadrados, podemos encontrar o coeficiente angular que coincide exatamente com a velocidade da onda. Então, realizando esses dois processos, temos os gráficos abaixo:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.8]{images/Gráfico 2.png}
+  \caption{ Gráfico de $L$ em função de $n/2f$.}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.25]{images/Gráfico 2'.jpeg}
+  \caption{ Aplicação dos Mínimos Quadrados para obtenção dos coeficientes da reta.}
+\end{figure}
+
+Após a análise gráfica da relação entre o comprimento L e o harmônico da onda, aplicando o método dos mínimos quadrados, o coeficiente angular assumiu o valor de a =$(0,347 \pm 0,001)\cdot 10^3$ . Já o coeficiente linear foi igual a: $b =(0,0075 \pm 0,0009)\cdot 10^3$.\\
+
+Dessa forma, como o coeficiente angular corresponde à velocidade na equação de onda estacionária, temos que a velocidade do som no ar, obtido no experimento para uma temperatura local de 25ºC, foi igual a:
+
+\[ \therefore v = (0,347 \pm 0,001) \cdot 10^3 = (347 \pm 1) m/s^2 \]
+
+Podemos notar que a velocidade obtida por esse método apresentou um valor diferente daquela calculada diretamente da equação. Entretanto, como o valor de referência da velocidade do som no ar corresponde a $v_{ref} = 343$, temos que a velocidade experimental obtida a partir dos mínimos quadrados também não pertence ao intervalo de referência. Assim como no outro método, podemos atribuir essa diferença a erros sistemáticos, porém pode-se notar que o valor atingido também é muito próximo do valor padronizado pela literatura, o que comprova a eficácia experimental.
