@@ -1,3 +1,49 @@
-\subsection{Fator $\gamma$ do ar: Método de Ruchardt}
+\subsection{Fator $\gamma$ do ar: Método de Rüchardt}
 
-aaaaaaaaaaaaaaaaaaaa
+Primeiramente, o experimento foi montado pelos responsáveis do laboratório e disponibilizados por meio das gravações de vídeo. Assim sendo, nos pudemos extrair os seguintes dados e convertendo-os para o SI temos:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ |c||c||c||c|  }
+        \hline
+        \textbf{O que foi medido} & \textbf{Valor} & \textbf{Incerteza} & \textbf{Unidade}\\
+        \hline 
+         Massa da bolinha (m)       & 0,01672   & 0,00001   & kg\\
+         Diâmetro do tubo (d)       & 0,0160    & 0,0001    & m\\
+         Volume do recipiente (V)   & 0,0104    & 0,0001    & $m^3$\\
+         \hline
+         Período de 4 oscilações ($T_4$) & 4,82 & 0,01 & s\\
+         \hline
+         Pressão atmosférica (P) & 92125,8 & 0,1 & Pa\\
+        \hline
+    \end{tabular}
+    \caption{Dados físicos e dimensões do experimento de Rüchardt} 
+\end{table}
+
+Com os dados em mãos podemos calcular tudo que precisamos. Antes de tudo, entretanto, é necessário obter o período de apenas uma oscilação (T), o que é simples, pois basta dividir $T_4$ por 4:
+
+\[ T = \frac{T_4}{4} = \frac{4,82}{4} = 1,205 s \]
+\[ \delta T = \frac{\delta T_4}{4} = \frac{0.01}{4} = 0,0025 s \]
+
+Além disso, precisamos da área do tubo onde a bolinha estava suspensa. Mais uma vez, esse é um resultado bem fácil de ser obtido, já que temos o diâmetro do tubo e a seção do tubo é um círculo:
+
+\[ r = \frac{d}{2} = \frac{0,0160}{2} = 0,008 m \]
+\[ A = \pi r^2 = 3,14159 \cdot (0,008)^2 = 0.0002010619 m^2 \]
+
+\[ \delta r = \frac{\delta d}{2} = \frac{0,0001}{2} = 0,00005 m \]
+\[ \delta A = \pi (\delta r)^2 = 3,14159 \cdot (0,00005)^2 = 0.00000000785 m^2 \]
+
+Agora sim podemos calcular o nosso fator $\gamma$ do ar atmosférico, que é uma tarefa bem direta, pois basta inserirmos os dados experimentais na equação geral:
+
+\[ N = m \cdot V \]
+\[ N = 0,01672 \cdot 0,0104 = 0,000173888 \]
+
+\[ D = P \cdot A^2 \cdot T^2 \]
+\[ D = 92125,8 \cdot (0,0002010619)^2 \cdot (1,205)^2 = 0,0054077307 \]
+
+\[ \gamma = 4\pi^2 \cdot \frac{N}{D} \]
+\[ \gamma = 4\pi^2 \cdot \frac{0,000173888}{0,0054077307} = 1,26944617 \]
+
+Agora, propagando as incertezas:
+
+

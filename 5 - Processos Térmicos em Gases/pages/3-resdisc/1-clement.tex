@@ -1,3 +1,150 @@
 \subsection{Fator $\gamma$ do ar: Método de Clément – Desormes}
 
-aaaaaaaaaaaaaaaaaaaa
+Para esse primeiro experimento, já explicado na seção anterior, buscaremos encontrar o coeficiente $\gamma$ do ar utilizando o método de Clément -  Desormes. O esquema dos passos que seguiremos está logo abaixo:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.67]{images/Esquema exp.png}
+  \caption{Esquema dos três estados que consideramos no processo experimental de Clément-Desormes.}
+\end{figure}
+
+Os 3 estados presentes no esquema acima, representam os pontos destacados na Figura \ref{fig:processo-grafico}. Assim, tendo explicitado nosso experimento, podemos dar iniciá-lo.
+
+Primeiramente, vamos tampar a garrafão e bombear manualmente uma certa quantidade de ar para dentro dele, para aumentar a pressão interna. Olhando para o manômetro, esperaremos que o sistema se estabilize - à temperatura ambiente $T_1$ e uma dada pressão $P_1$ (a utilizaremos em função da diferença de altura $h_1$ lida no manômetro).
+Chamaremos essa configuração de Estado Inicial ou Estado 1.
+
+Com base na observação do vídeo do experimento, podemos dizer que a altura $h_1$ é a diferença de altura da coluna maior para a menor:\ 
+\ \[h_1 = h_{maior} - h_{menor} \]
+\[\therefore h_1 = 223,2 cm - 205,2 cm  =  18,0 cm\]
+A incerteza de $h_1$ será:\\
+\[\delta h_1 = 0,1 cm + 0,1 cm =  0,2 cm\]
+\[\therefore h_1 = 18,0 \pm 0,2 cm\]
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.37]{images/Medida 1.1.png}
+  \caption{Medida da altura $h_1$ no manômetro (1°experimento).}
+\end{figure}
+
+Agora, vamos abrir e fechar a válvula do garrafão. Dessa forma, a pressão interna deve se igualar à pressão atmosférica ($P_2$ = $P_{atm}$). O processo de abrir e fechar o sistema é muito rápido, assim, o gás não tem tempo de trocar calor com o ambiente nesse curto período de tempo, além disso, o vidro do garrafão é um péssimo condutor de calor. Logo, podemos considerar esse processo como adiabático. Ao fechar o tampão da garrafa, chegamos ao Estado Intermediário ou Estado 2, da Figura \ref{fig:processo-grafico}.\\
+
+Logo após a expansão adiabática ocorrer, o gás deve estar em uma temperatura $T_2$ ligeiramente menor que a temperatura ambiente $T_{amb}$ = $T_1$. Após um tempo, a temperatura do sistema irá aumentar e se igualar à temperatura ambiente $T_1$. As paredes rígidas do garrafão garantem que o processo ocorra a volume constante $V_2$ (processo isocórico). Assim que o gás atingir a temperatura $T_1$, estaremos no Estado Final ou Estado 3 pela Figura \ref{fig:processo-grafico}. A pressão nesse ponto ($P_3$) pode ser dada em função da altura $h_3$, que será encontrada a seguir:\
+
+\ \[h_3 = h_{maior} - h_{menor} \]
+\[\therefore h_3 = 216,9 cm - 211,3 cm  =  5,6 cm\]
+A incerteza de $h_3$ será:\\
+\[\delta h_3 = 0,1 cm + 0,1 cm =  0,2 cm\]
+\[\therefore h_3 = 5,6 \pm 0,2 cm\]
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.4]{images/Medida 2.1.png}
+  \caption{Medida da altura $h_3$ no manômetro (1°experimento).}
+\end{figure}
+
+Dessa maneira, conseguimos achar $\gamma$ em função das alturas $h_1$ e $h_3$, como explicitado na seção anterior:\ 
+
+\[ \gamma = \frac{h_1}{h_1 - h_3}\]
+\[ \gamma = \frac{18,0}{18,0 - 5,6} = \frac{18,0}{12,4} \]
+\[\therefore \gamma = 1,4516129 \approx 1,45\]
+E a incerteza de $\gamma$ será:\\
+\[\delta \gamma = \frac{(\delta h_1 \cdot h_1 - h_3)+((\delta h_1) + \delta h_3)) \cdot h_1)}{(h_1 - h_3)^2}\]
+\[\delta \gamma = \frac{(0,1 \cdot 12,4)+(0,2 \cdot 18,0)}{(12,4)^2}\]
+\[\delta \gamma = \frac{4,84}{153,76} = 0,0314776 \approx 0,03\]
+Logo:\\ 
+\[\therefore \gamma_1 = 1,45 \pm 0,03 \]
+
+Agora, vamos repetir todo esse processo mais duas vezes para poder calcular média e desvio padrão dos nossos valores para o coeficiente $\gamma$, e assim, obter um resultado mais satisfatório.
+
+Na segunda medição, chegamos ao Estado 1 novamente, e medimos nosso $h_1$ - nas mesmas condições que da primeira vez -, que agora ficou:\\
+
+\ \[h_1 = h_{maior} - h_{menor} \]
+\[\therefore h_1 = 222,2 cm - 206,1 cm  =  16,1 cm\]
+A incerteza de $h_1$ será:\\
+\[\delta h_1 = 0,1 cm + 0,1 cm =  0,2 cm\]
+\[\therefore h_1 = 16,1 \pm 0,2 cm\]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.37]{images/Medida 1.2.png}
+  \caption{Medida da altura $h_1$ no manômetro (2°experimento).}
+\end{figure}
+
+Assim, realizamos o processo adiabático de 1 até 2, e nesse Estado pudemos notar que $T_2$ era menor que $T_1$ e que  $P_2$ = $P_{atm}$, como antes. Depois disso, a temperatura subiu até se igualar à temperatura ambiente $T_1$. Esse processo isocórico, nos leva do Estado 2 para o Estado 3, e a pressão $P_3$ pode ser dada em relação à medida $h_3$ averiguada no manômetro:
+
+\ \[h_3 = h_{maior} - h_{menor} \]
+\[\therefore h_3 = 216,1 cm - 212,1 cm  =  4,0 cm\]
+A incerteza de $h_3$ será:\\
+\[\delta h_3 = 0,1 cm + 0,1 cm =  0,2 cm\]
+\[\therefore h_3 = 4,0 \pm 0,2 cm\]
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.4]{images/Medida 2.2.png}
+  \caption{Medida da altura $h_3$ no manômetro (2°experimento).}
+\end{figure}
+
+Logo, podemos achar $\gamma$ em função das alturas $h_1$ e $h_3$:\\
+
+\[ \gamma = \frac{h_1}{h_1 - h_3}\]
+\[ \gamma = \frac{16,1}{16,1 - 4,0} = \frac{16,1}{12,1} \]
+\[\therefore \gamma = 1,3305785 \approx 1,33\]
+E a incerteza de $\gamma$ será:\\
+\[\delta \gamma = \frac{(\delta h_1 \cdot h_1 - h_3)+((\delta h_1) + \delta h_3)) \cdot h_1)}{(h_1 - h_3)^2}\]
+\[\delta \gamma = \frac{(0,1 \cdot 12,1)+(0,2 \cdot 16,1)}{(12,1)^2}\]
+\[\delta \gamma = \frac{4,43}{146,41} = 0,0302575 \approx 0,03\]
+Logo:\\ 
+\[\therefore \gamma_2 = 1,33 \pm 0,03 \]
+
+Por último, faremos as mesmas medidas pela terceira vez, buscando $h_1$ e $h_3$ para o cálculo de $\gamma$, então, vamos apresentar diretamente os valores das alturas, uma vez que o processo já foi explicado acima, e vamos realizá-lo identicamente.\\
+
+No Estado 1, teremos:\\
+
+\ \[h_1 = h_{maior} - h_{menor} \]
+\[\therefore h_1 = 223,0 cm - 205,3 cm  =  17,7 cm\]
+A incerteza de $h_1$ será:\\
+\[\delta h_1 = 0,1 cm + 0,1 cm =  0,2 cm\]
+\[\therefore h_1 = 17,7 \pm 0,2 cm\]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.37]{images/Medida 1.3.png}
+  \caption{Medida da altura $h_1$ no manômetro (3°experimento).}
+\end{figure}
+
+Já para o Estado 3:\\
+
+\ \[h_3 = h_{maior} - h_{menor} \]
+\[\therefore h_3 = 216,7 cm - 211,6 cm  = 5,1 cm\]
+A incerteza de $h_3$ será:\\
+\[\delta h_3 = 0,1 cm + 0,1 cm =  0,2 cm\]
+\[\therefore h_3 = 5,1 \pm 0,2 cm\]
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.4]{images/Medida 2.3.png}
+  \caption{Medida da altura $h_3$ no manômetro (3°experimento).}
+\end{figure}
+
+Com as alturas $h_1$ e $h_3$ calculadas, conseguimos obter o coeficiente $\gamma$:\\
+
+\[ \gamma = \frac{h_1}{h_1 - h_3}\]
+\[ \gamma = \frac{17,7}{17,7 - 5,1} = \frac{17,7}{12,6} \]
+\[\therefore \gamma = 1,4047619 \approx 1,40 \]
+E a incerteza de $\gamma$ será:\\
+\[\delta \gamma = \frac{(\delta h_1 \cdot h_1 - h_3)+((\delta h_1) + \delta h_3)) \cdot h_1)}{(h_1 - h_3)^2}\]
+\[\delta \gamma = \frac{(0,1 \cdot 12,6)+(0,2 \cdot 16,1)}{(12,6)^2}\]
+\[\delta \gamma = \frac{4,48}{158,76} = 0,02821869 \approx 0,03\]
+Logo:\\ 
+\[\therefore \gamma_3 = 1,40 \pm 0,03 \]
+
+Assim, até agora obtivemos os seguintes valores para $\gamma$ nos 3 experimentos analisados:\\
+\[\gamma_1 = 1,45 \pm 0,03\]
+\[\gamma_2 = 1,33 \pm 0,03\]
+\[\gamma_3 = 1,40 \pm 0,03\]
+
+Tendo esses valores, podemos então calcular a média e o desvio padrão desses resultados.\\
