@@ -38,12 +38,49 @@ Agora sim podemos calcular o nosso fator $\gamma$ do ar atmosférico, que é uma
 \[ N = m \cdot V \]
 \[ N = 0,01672 \cdot 0,0104 = 0,000173888 \]
 
-\[ D = P \cdot A^2 \cdot T^2 \]
-\[ D = 92125,8 \cdot (0,0002010619)^2 \cdot (1,205)^2 = 0,0054077307 \]
+\[ AT = A^2 \cdot T^2 \]
+\[ AT =(0,0002010619)^2 \cdot (1,205)^2 = 0,0000000586994 \]
+
+\[ D = P \cdot AT \]
+\[ D = 92125,8 \cdot 0,0000000586994 = 0,0054077307 \]
 
 \[ \gamma = 4\pi^2 \cdot \frac{N}{D} \]
 \[ \gamma = 4\pi^2 \cdot \frac{0,000173888}{0,0054077307} = 1,26944617 \]
 
-Agora, propagando as incertezas:
+Agora, propagando as incertezas para essas medidas temos:
 
+\[ \delta N = \delta m \cdot V + m \cdot \delta V \]
+\[ \delta N = 0,00001 \cdot 0,0104 + 0,01672 \cdot 0,0001 = 0,000001776 \]
 
+\[ \delta a = 2 \cdot A \cdot \delta A \]
+\[ \delta a = 2 \cdot 0.0002010619 \cdot 0.00000000785 = 0,00000000000315667 \]
+
+\[ \delta t = 2 \cdot T \cdot \delta T \]
+\[ \delta t = 2 \cdot 1,205 \cdot 0,0025 = 0,006025 \]
+
+\[ \delta AT = A^2 \cdot \delta t + \delta a \cdot T^2 \]
+\[ \delta AT = (0,0002010619)^2 \cdot 0,006025 + 0,00000000000315667 \cdot (1,205)^2 \]
+\[ \delta AT = 0,0000000002481496 \]
+
+\[ \delta D = P \cdot \delta AT + \delta P \cdot AT \]
+\[ \delta D = 92125,8 \cdot 0,0000000002481496 + 0,1 \cdot 0,0000000586994 \]
+\[ \delta D = 0,00002286684 \]
+
+\[ \delta \gamma = 4\pi^2 \cdot \frac{N \cdot \delta D + \delta N \cdot D}{D^2} \]
+\[ \delta \gamma = 4\pi^2 \cdot \frac{0,000173888 \cdot 0,00002286684 + 0,000001776 \cdot 0,0054077307}{0,0054077307^2} \]
+\[ \delta \gamma = 0,005835689998 \]
+
+Assim sendo, ajustando os algarismos significativos teremos que o fator $\gamma$ do ar atmosférico equivale a:
+
+\[ \therefore \mathbf{\gamma = (1,269 \pm 0,006)} \]
+
+Podemos notar que esse valor se aproxima muito do esperado para um \textbf{gás poliatômico} ($\gamma_p \approx$ 1,30). Entretanto, nossa atmosfera é 99\% composta de gases diatômicos (78\% $N_2$, 21\% $O_2$) e o fator $\gamma$ para esses gases é maior ($\gamma_d \approx$ 1,40).\\
+
+Isso quer dizer que o nosso experimento \textbf{não foi compatível experimentalmente}, uma vez que a distribuição do valor era para englobar $\gamma_d$ mas não o fez. Por causa disso, devemos tentar entender quais foram os pontos que podem ter diminuído a precisão da nossa prática: 
+
+\begin{enumerate}
+    \item \textbf{Processo termodinâmico real}: Nós vivemos em um mundo onde os elementos que compõem o aparato experimental não são ideais. Ou seja, o frasco retira calor do ar dentro dele a fim de atingir um equilíbrio térmico durante o processo termodinâmico. Mesmo que o vidro seja um bom isolante, ele ainda sim realiza essa troca, e essa energia retirada faz a diferença nos nossos cálculos.
+    \item \textbf{Atrito}: A bolinha que oscila tem que estar em contato com a parede do tubo vertical para criar uma vedação. Isso quer dizer que ela esta em contato com outra superfície e portanto existe um atrito entre eles. Mesmo que ela seja polida ele existe, e pode ser um dos fatores que retiraram energia do sistema. Além disso, temos uma força de arrasto no momento da oscilação, que também ajuda a converter a energia cinética da bolinha em calor.
+\end{enumerate}
+
+Outro fator que poderia ter influenciado os resultados seria se o ar do laboratório com uma concentração maior de gases poliatômicos, sendo o mais provável deles o Dióxido de Carbono ($CO_2$). Entretanto, isso seria impossível, visto que o professor não conseguiria gravar os vídeos por não conseguir respirar.

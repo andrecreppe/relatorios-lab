@@ -143,8 +143,49 @@ Logo:\\
 \[\therefore \gamma_3 = 1,40 \pm 0,03 \]
 
 Assim, até agora obtivemos os seguintes valores para $\gamma$ nos 3 experimentos analisados:\\
-\[\gamma_1 = 1,45 \pm 0,03\]
-\[\gamma_2 = 1,33 \pm 0,03\]
-\[\gamma_3 = 1,40 \pm 0,03\]
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ |c||c||c| }
+        \hline
+        \textbf{Número do experimento} & \textbf{Valor} & \textbf{Incerteza}\\
+        \hline 
+        1º experimento ($\gamma_1$)       & 1,45   & 0,03  \\
+        2º experimento ($\gamma_2$)       & 1,33   & 0,03  \\
+        3º experimento ($\gamma_3$)       & 1,40   & 0,03  \\
+        \hline
+        \end{tabular}
+    \caption{Valores de $\gamma$ para cada um dos experimentos realizados} 
+\end{table}
+
 
 Tendo esses valores, podemos então calcular a média e o desvio padrão desses resultados.\\
+
+A média $\overline{\gamma}$ será dada por:\\
+
+\[ \overline{\gamma} = \frac{\sum_{i=1}^{N} \gamma_i}{N}\]
+\[ \overline{\gamma} = \frac{\sum_{i=1}^{3} \gamma_i}{3}\]
+\[ \overline{\gamma} = \frac{(1,45) + (1,33) + (1,40)}{3}\]
+\[ \overline{\gamma} = 1,3933333333 \approx 1,39\]
+
+E sua incerteza será:\\
+\[ \delta\overline{\gamma} = \frac{\sum_{i=1}^{N} |\gamma_i - \overline{\gamma}|}{N}\]
+\[ \delta\overline{\gamma} = \frac{\sum_{i=1}^{3} |\gamma_i - \overline{\gamma}|}{3}\]
+\[ \delta\overline{\gamma} = \frac{(|1,45 - 1,39|) + (|1,33 - 1,39|) + (|1,40 -1,39|) }{3}\]
+\[ \delta\overline{\gamma} = \frac{0,13}{3} = 0,043333333 \approx 0,04\]
+
+Logo, $\gamma$ pode ser representado, de forma menos rigorosa, por:
+\[ \overline{\gamma} \pm \delta  = 1,39 \pm 0,04 \]
+
+Já o desvio padrão $\sigma$, é dado por:
+
+\[ \sigma = \sqrt{\frac{\sum_{i=1}^{N} (\gamma_i - \overline{\gamma})^2}{N-1}}\]
+\[ \sigma = \sqrt{\frac{\sum_{i=1}^{3} (\gamma_i - \overline{\gamma})^2}{2}}\]
+\[ \sigma = \sqrt{\frac{(1,45-1,39)^2 + (1,33-1,39)^2 + (1,40-1,39)^2}{2}}\]
+\[ \sigma = \sqrt{\frac{0,0036 + 0,0036 + 0,0001}{2}}\]
+\[ \sigma = \sqrt{\frac{0,0073}{2}} = \sqrt{0,00365} \]
+\[ \therefore \sigma = 0,06041523 \approx 0,06 \]
+
+Então o resultado do experimento com sua incerteza deve ser representado da seguinte forma:
+\[ \overline{\gamma} \pm \sigma = 1,39 \pm 0,06\]
+
