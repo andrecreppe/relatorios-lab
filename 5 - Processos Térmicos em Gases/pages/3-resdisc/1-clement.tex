@@ -161,7 +161,7 @@ Assim, até agora obtivemos os seguintes valores para $\gamma$ nos 3 experimento
 
 Tendo esses valores, podemos então calcular a média e o desvio padrão desses resultados.\\
 
-A média $\overline{\gamma}$ será dada por:\\
+A média $\overline{\gamma}$ será dada por:
 
 \[ \overline{\gamma} = \frac{\sum_{i=1}^{N} \gamma_i}{N}\]
 \[ \overline{\gamma} = \frac{\sum_{i=1}^{3} \gamma_i}{3}\]
@@ -187,5 +187,47 @@ Já o desvio padrão $\sigma$, é dado por:
 \[ \therefore \sigma = 0,06041523 \approx 0,06 \]
 
 Então o resultado do experimento com sua incerteza deve ser representado da seguinte forma:
-\[ \overline{\gamma} \pm \sigma = 1,39 \pm 0,06\]
+\[ \overline{\gamma} \pm \sigma = 1,39 \pm 0,06\]\\
 
+Agora, faremos algumas deduções de fórmulas que foram utilizadas por nós ao longo do experimento. Primeiramente, vamos deduzir a primeira relação que chegamos para o coeficiente $\gamma$:
+
+Com base no gráfico da Figura \ref{fig:processo-grafico}, vamos considerar a relação entre $P$ e $V$ no decorrer do processo adiabático explicitado no gráfico. 
+Sabemos que $P V^\gamma = cte $, logo, no processo adiabático, podemos dizer que:\\
+\[P_1 V_1^\gamma = P_2 V_2^\gamma\]
+Assim, temos que:
+\[\frac{V_1^\gamma}{V_2^\gamma}  = \frac{P_2}{P_1}\]
+\[\left(\frac{V_1}{V_2}\right)^\gamma  = \left(\frac{P_2}{P_1}\right)\]\\
+Como queremos analisar o coeficiente $\gamma$ e ele aparece no expoente, podemos aplicar o logaritmo natural dos dois lados da equação, teremos:\\
+\[\gamma \ln\left(\frac{V_1}{V_2}\right)  = \ln \left(\frac{P_2}{P_1}\right)\]\\
+Isolando o coeficiente em termos da pressão $P_1$ e $P_2$ e dos volumes $V_1$ e $V_2$, ficaremos com a seguinte relação:\\
+\[\gamma  = \frac{\ln{\left(\frac{P_2}{P_1}\right)}}{\ln{\left(\frac{V_1}{V_2}\right)}} \]\\ 
+Assim obtemos a equação 22, da Apostila de Laboratório (\ref{bibl:apostila}).\\
+
+Outra dedução que faremos, é a da relação final que usamos para achar $\gamma$ em função das alturas:\\
+
+Da equação 22 podemos utilizar a passagem já explicada na seção Materiais e Métodos, para provar que:
+\[ \gamma = \frac{ln\frac{P_2}{P_1}}{ln\frac{V_1}{V_2}} \ \ = \ \ \frac{ln\frac{P_2}{P_1}}{ln\frac{P_3}{P_1}} \] \
+
+Desse modo, conhecendo as pressões:
+
+\[ P_1 = P_{atm} + \rho g h_1 \]
+\[ P_2 = P_{atm} \]
+\[ P_3 = P_{atm} + \rho g h_3 \] \
+
+Podemos obter:
+\[ P_1 = P_{atm}\left( 1+\frac{\rho g h_1}{P_{atm}}\right) \ \  e  \ \ P_3 = P_{atm}\left(1+\frac{\rho g h_3}{P_{atm}}\right) \]\\
+
+Substituindo os valores das pressões podemos dizer que $\gamma$ é:\\
+\[ \gamma = \frac{ln\left(\frac{P_{atm}}{P_{atm}+\rho g h_1}\right) }{ln\left (\frac{P_{atm}+\rho g h_3}{P_{atm}+\rho g h_1}\right) } = \frac{ln\left(\frac{P_{atm}}{P_{atm}(1 + \rho g h_1)}\right) }{ln\left (\frac{P_{atm} ( 1 + \rho g h_3)}{P_{atm} ( 1 + \rho g h_1)}\right) } \]
+
+\[ \gamma = \frac{ln\left(\frac{1}{1 + \rho g h_1}\right)}{ln\left (\frac{1 + \rho g h_3}{ 1 + \rho g h_1}\right) }  =  \frac{\ln{1}-\ln{(1+\rho g h_1}}{\ln{1+ \rho g h_3)} - \ln{(1+\rho g h_1)}}\]\\
+
+Assim, como ($ \rho g h << P_{atm}$), podemos assumir que $\ln{\left(1+ \frac{\rho g h}{P_{atm}}\right)} \approx \frac{\rho g h}{P_{atm}} $, como já explicado na seção Materiais e Métodos $^{[MM1]}$. Desse modo:\\
+
+\[ \gamma = \frac{0 - [(\rho g h_1) \cdot (-1)]}{[(\rho g h_3) - (\rho g h_1)] \cdot (-1)}\]
+
+\[ \gamma = \frac{(\rho g h_1)}{(\rho g h_1) - (\rho g h_3)} = \frac{h_1}{h_1 - h_3}\] \\
+
+Então, demonstramos agora a equação (28) da Apostila de Laboratório (\ref{bibl:apostila}).\\
+
+Desse modo, realizamos o experimento e ainda deduzimos as equações (22) e (28) utilizadas na prática. \\
