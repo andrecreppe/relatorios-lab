@@ -1,0 +1,59 @@
+\documentclass[a4paper,12pt,twoside]{article}
+
+% Pacotes de compilação
+    % Formatação
+\usepackage[utf8]{inputenc} % não precisa ficar colocando \c para caracteres especiais
+\usepackage{indentfirst}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{array}
+\usepackage{hyperref}
+    % Imagens
+\usepackage{graphicx}
+\usepackage{float}
+    % Math
+\usepackage{textcomp}
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+% \usepackage[nodisplayskipstretch]{setspace}
+
+% Table centering -> array package
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+%Bibliografia
+\usepackage{natbib}
+
+%Idioma
+\usepackage[portuguese]{babel}
+
+% Pacotes de citações
+    % Paginas com as citações na bibl
+% \usepackage[brazilian,hyperpageref]{backref}
+    % Citações padrão ABNT
+% \usepackage[alf]{abntex2cite}
+
+% Configurações da página
+\setlength{\paperwidth}{21cm}          % Largura da página
+\setlength{\paperheight}{29,7cm}       % Altura da página
+\setlength{\textwidth}{15.5cm}         % Largura do texto
+\setlength{\textheight}{24.6cm}        % Altura do texto
+\setlength{\topmargin}{-1.0cm}         % Margem superior da página = 1 polegada + valor atribuição.
+                                       % \setlenght{\topmargin}{0cm} dá 2.54cm de margem superior.
+\setlength{\oddsidemargin}{0.46cm}     % Margem esquerda = 1 polegada + valor
+\setlength{\evensidemargin}{0.46cm} 
+
+% ================== DOCUMENTO ====================== %
+
+\begin{document}
+
+\input{pages/0-capa}
+\tableofcontents
+\input{pages/1-objetivos}
+\input{pages/2-matmet}
+\input{pages/3-resdisc}
+\input{pages/4-conclusao}
+\input{pages/5-biblio}
+
+\end{document}
