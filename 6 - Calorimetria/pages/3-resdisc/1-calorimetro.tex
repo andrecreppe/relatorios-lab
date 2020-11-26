@@ -1,3 +1,52 @@
 \subsection{Determinação da capacidade térmica do calorímetro}
 
-Judá
+Inicialmente, vamos apresentar as medidas das massas e das temperaturas, obtidas com base no vídeo do professor Eduardo:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ |c||c||c| }
+        \hline
+        \textbf{O que foi medido} & \textbf{Massa (g)} & \textbf{Temperatura (°C)}\\
+        \hline 
+        Copo de alumínio  & 51,82 $\pm$ 0,01 & 23,5 \\
+        Água fria (situação 1)     & 125,02 $\pm$ 0,01   & 12,4  \\  
+        Água quente (situação 2)   & 122,07 $\pm$ 0,01   & 53,7  \\
+        \hline
+        Água quente + fria & 247,09 $\pm$ 0,01 & 31,4 \\
+        \hline
+        \end{tabular}
+    \caption{Valores medidos para o experimento} 
+\end{table}
+
+Com esses dados em mãos, vamos começar o experimento. Para iniciá-lo, medimos a massa do copo de alumínio - para um passo futuro -, logo em seguida medimos a massa $m_1$ da água gelada, que como consta na tabela acima, é de 125,02 g. Adicionamos essa água no calorímetro e esperamos que o sistema entrasse em equilíbrio, para ai, podermos medir a temperatura em equilíbrio térmico inicial: $T_1$ = 12,4 °C.\\
+
+Agora, tratamos da porção quente de água, que estava a uma temperatura $T_2$ = 53,7 °C e tinha uma massa $m_2$ igual a 122,07 g. Adicionamos então essa nova massa de água ao calorímetro, esperando que o sistema entrasse novamente em equilíbrio em uma nova temperatura final, que com o auxílio de um termômetro pudemos ver que era $T_f$ = 31,4 °C.\\
+
+Dessa forma, utilizando a fórmula já citada na seção Materiais e Métodos, podemos calcular a capacidade térmica do nosso calorímetro, com base nos valores medidos acima:
+
+\[C =  \frac{m_2 c_a (T_2 - T_f) }{(T_f - T_1)} - m_1 c_a \]
+\[C =  \frac{[(122,07) (1) (53,7 - 31,4)]}{(31,4 - 12,4)} - [(125,02) (1)] =  \frac{[(122,07)(22,3)] }{(19)} - (125,02)\]
+\[C =  143,27 - 125,02\]
+\[C = 18,25 \ \ cal/^\circ C\]
+
+E a incerteza  $\delta C$ será:
+\[\delta C =  \frac{\delta m_2 c_a (T_2 - T_f) }{(T_f - T_1)} - m_1 c_a \]
+\[\delta C =  \frac{[(122,07) (1) (53,7 - 31,4)]}{(31,4 - 12,4)} - [(125,02) (1)] =  \frac{[(122,07)(22,3) }{(19)]} - (125,02)\]
+\[\delta C =  143,27 - 125,02\]
+\[\delta C = 18,25\]
+
+Podemos calcular agora, a capacidade térmica do copo de alumínio: 
+\[C_{copo} = m_{copo} c_{Al}\]
+\[C_{copo} = (51,82)(0,218) \]
+\[C_{copo} = 11,29676 \approx 11,30 \ \ cal/^\circ C \]
+
+Desse modo, podemos perceber que existe uma grande diferença entre calcular a capacidade térmica do calorímetro e apenas a do copo de alumínio:
+\[\mathbf{C_{cal} = 18,25 \ \  cal/^\circ C }\]
+\[\mathbf{C_{copo} = 11,30 \ \ cal/^\circ C}\]
+\[\mathbf{\therefore C_{cal}\ \  \neq \ \  C_{copo}}\] 
+
+Analisando os valores obtidos, podemos dizer que chegamos em valores plausíveis, uma vez que a capacidade térmica do calorímetro deveria ser maior que a do copo de alumínio e, de fato, tem um valor mais alto. Isso deveria acontecer, pois a capacidade térmica do calorímetro tem a influência de todos os materiais que o compõem, e o calor específico do isopor - material que predomina no corpo do calorímetro - é maior que o do alumínio - que constitui o copo. Ainda temos o plástico - que forma a camada externa do calorímetro e sua tampa -, o qual possui um calor específico diferente daquele do alumínio, ajudando que o $C_{cal}$ seja diferente do $C_{copo}$. Os valores dos calores específicos são:\\
+
+$ c_{Al}$ = 0,218  cal/g°C  , $ c_{isopor}$ = 0,330  cal/g°C , $ c_{plastico}$ = 0,210 a 0,430 cal/g°C\\ %(dependendo do plástico utilizado).\\
+
+Desse modo, podemos encerrar o nosso experimento inicial.\\

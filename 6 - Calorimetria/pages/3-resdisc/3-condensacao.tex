@@ -1,3 +1,46 @@
 \subsection{Determinação do calor latente de condensação da água}
 
-Maia
+Conforme descrito na metodologia, os dados relativos às massas e às temperaturas foram coletados respeitando a sequência do experimento. Entretanto, para efeito de organização, podemos organizar esses dados em tabelas. Para as temperaturas, temos a seguinte tabela:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ |c||c| }
+        \hline
+        \textbf{Condição de medida} & \textbf{Temperatura (°C)}\\
+        \hline 
+        Ebulição da água ($t_c$)  & $t_c = 97,1$ \\
+        Equilíbrio inicial com apenas água fria ($t_1$) & $t_1 = 8,8$  \\  
+        Equilíbrio final após a adição de água em vapor ($t_f$) & $t_f = 71,7$  \\
+        \hline
+        \end{tabular}
+    \caption{Valores registrados experimentalmente para as temperaturas.} 
+\end{table}
+
+Para as massas coletadas ao longo do experimento, temos a seguinte tabela:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ |c||c| }
+        \hline
+        \textbf{Condição de medida} & \textbf{Massa (g)}\\
+        \hline 
+        Massa do copo do calorímetro  ($m_c$)  & $m_c = 52,24 \pm 0,01$ \\
+        Massa de água fria  ($m_1$) & $m_1 = 167,48 \pm 0,01$  \\  
+        Massa Total do sistema ($m_f$) & $m_f = 187,02 \pm 0,01$  \\
+        Massa de água condensada  ($m_2$) & $m_2 = m_f - m_1 = 187,02 - 167,48 = 19,54 \pm 0,02$  \\
+        \hline
+        \end{tabular}
+    \caption{Valores registrados experimentalmente para as massas.} 
+\end{table}
+
+Dessa forma, sabendo que o calor específico da água é $c_a= 1,00 cal/g^\circ C$ e que a capacidade térmica calculada no primeiro experimento é $C = 18,25 cal/^\circ C$, temos condições agora de calcular qual o valor do calor latente de condensação da água a partir da expressão descrita na metodologia. Então, temos os seguintes cálculos:
+
+\[ L_c = \frac{(m_1 \cdot c_a + C) \cdot (t_1 - t_f)}{m_2} + c_a \cdot (t_c - t_f)\]
+\[ L_c = \frac{(167,48 \cdot 1,00 + 18,25) \cdot (8,8 - 71,7)}{19,54} + 1,00 \cdot (97,1 - 71,7)\]
+\[ L_c = \frac{(167,48 + 18,25) \cdot (- 62,9)}{19,54} + (25,4)\]
+\[ L_c = \frac{(185,73) \cdot (- 62,9)}{19,54} + (25,4) = \frac{-11682,417}{19,54} + (25,4) = -597,8719 + 25,4\]
+\[\therefore L_C = -572,47190 \frac{cal}{g}\]
+
+Frente ao valor tabelado do calor latente de condensação do vapor da água, $L_{c-ref}= -539 cal/g$, podemos concluir que o valor encontrado, $L_c= -572,47190 cal/g$, é equivalente ao valor de referência.
+
+O motivo do resultado ser negativo é simples: a quantidade de calor (Q) será maior que zero quando o sistema receber calor; por outro lado, quando o sistema cede calor, temos que a quantidade de calor é negativa. Tendo em vista que a condensação é uma transformação física provocada pela perda de calor ($Q < 0$), na fórmula de calorimetria $Q = mL$, a variável L (coeficiente de calor latente) será negativa.
