@@ -30,19 +30,51 @@ Dessa forma, utilizando a fórmula já citada na seção Materiais e Métodos, p
 \[C = 18,25 \ \ cal/^\circ C\]
 
 E a incerteza  $\delta C$ será:
-\[\delta C =  \frac{\delta m_2 c_a (T_2 - T_f) }{(T_f - T_1)} - m_1 c_a \]
-\[\delta C =  \frac{[(122,07) (1) (53,7 - 31,4)]}{(31,4 - 12,4)} - [(125,02) (1)] =  \frac{[(122,07)(22,3) }{(19)]} - (125,02)\]
-\[\delta C =  143,27 - 125,02\]
-\[\delta C = 18,25\]
+\[C =  \frac{ m_2 c_a (T_2 - T_f) }{(T_f - T_1)} - m_1 c_a \]
+\[\therefore \delta C =  \delta \left[\frac{ m_2 c_a (T_2 - T_f) }{(T_f - T_1)}\right] +  \delta[m_1 c_a] \]
+\[\delta C =  \frac{ \delta[m_2 c_a (T_2 - T_f)] (T_f - T_1)  + [m_2 c_a (T_2 - T_f)] \delta (T_f - T_1) }{(T_f - T_1)^2} + \delta m_1 c_a \]
+
+\[\delta C =  \frac{c_a [ m_2  \delta(T_2 - T_f) + \delta m_2 (T_2 - T_f)] (T_f - T_1) + m_2 c_a (T_2 - T_f) \delta (T_f - T_1)  }{(T_f - T_1)^2} + \delta m_1 c_a \]
+
+\[\delta C =  \frac{c_a [ m_2  (\delta T_2 + \delta T_f) + \delta m_2 (T_2 - T_f)] (T_f - T_1) + m_2 c_a (T_2 - T_f) (\delta T_f + \delta T_1)  }{(T_f - T_1)^2} + \delta m_1 c_a \]
+
+\begin{multline*}
+    % \delta C = \frac{(122,07) (0,1 + 0,1)}{(31,4 - 12,4)^2} +
+    % \frac{(0,01) (53,7 - 31,4)] (31,4 - 12,4)}{(31,4 - 12,4)^2} + \\
+    \delta C = \frac{(122,07) (0,1 + 0,1) + (0,01) (53,7 - 31,4)] (31,4 - 12,4)}{(31,4 - 12,4)^2} +\\
+    + \frac{(122,07) (1) (53,7 - 31,4) (0,1 + 0,1)}{(31,4 - 12,4)^2} + (0,01) (1)
+\end{multline*}
+
+% \[\delta C =  \frac{(1) [ (122,07)  ( 0,1 + 0,1) + (0,01) (53,7 - 31,4)] (31,4 - 12,4) + (122,07) (1) (53,7 - 31,4) (0,1 + 0,1)  }{(31,4 - 12,4)^2} + (0,01) (1) \]
+
+\[\delta C =  \frac{[ (122,07)  (0,2) + (0,01) (22,3)] (31,4 - 12,4) + (122,07)(22,3)(0,2)  }{(19)^2} + (0,01)\]
+
+\[\delta C =  \frac{[ (24,414) + (0,223)] (19) + (544,4322)  }{361} + (0,01)\]
+
+\[\delta C =  \frac{(468,103) + (544,4322) }{361} + (0,01) = \frac{1012.5352}{361} + (0,01)\]
+
+\[\delta C =  (2,80481) + (0,01) = 2,81481 \approx 3 \]
+
+\[ \therefore \mathbf{C = 18 \pm 3 \ \ cal/^\circ C} \]
+
 
 Podemos calcular agora, a capacidade térmica do copo de alumínio: 
+
 \[C_{copo} = m_{copo} c_{Al}\]
 \[C_{copo} = (51,82)(0,218) \]
-\[C_{copo} = 11,29676 \approx 11,30 \ \ cal/^\circ C \]
+\[C_{copo} = 11,29676 \approx 11,297 \ \ cal/^\circ C \]
+
+A incerteza será:
+\[C_{copo} = \delta m_{copo} c_{Al}\]
+\[C_{copo} = (0,01)(0,218) \]
+\[C_{copo} = 0,00218 \approx 0,002 \ \ cal/^\circ C \]
+
+\[ \therefore \mathbf{C_{copo} = 11,297 \pm 0,002 \ \ cal/^\circ C} \]
 
 Desse modo, podemos perceber que existe uma grande diferença entre calcular a capacidade térmica do calorímetro e apenas a do copo de alumínio:
-\[\mathbf{C_{cal} = 18,25 \ \  cal/^\circ C }\]
-\[\mathbf{C_{copo} = 11,30 \ \ cal/^\circ C}\]
+
+\[C_{cal} = C = 18 \pm 3  \ \  cal/^\circ C \]
+\[C_{copo} = 11,297 \pm 0,002 \ \ cal/^\circ C\]
 \[\mathbf{\therefore C_{cal}\ \  \neq \ \  C_{copo}}\] 
 
 Analisando os valores obtidos, podemos dizer que chegamos em valores plausíveis, uma vez que a capacidade térmica do calorímetro deveria ser maior que a do copo de alumínio e, de fato, tem um valor mais alto. Isso deveria acontecer, pois a capacidade térmica do calorímetro tem a influência de todos os materiais que o compõem, e o calor específico do isopor - material que predomina no corpo do calorímetro - é maior que o do alumínio - que constitui o copo. Ainda temos o plástico - que forma a camada externa do calorímetro e sua tampa -, o qual possui um calor específico diferente daquele do alumínio, ajudando que o $C_{cal}$ seja diferente do $C_{copo}$. Os valores dos calores específicos são:\\

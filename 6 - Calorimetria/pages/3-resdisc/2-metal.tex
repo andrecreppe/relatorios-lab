@@ -21,21 +21,21 @@ Após a realização de todos os passos conforme dito na metodologia, pudemos ob
 
 Além dos dados obtidos experimentalmente, é necessário utilizar o valor da capacidade térmica do calorímetro deduzida anteriormente:
 
-\[ C = 18,25 \ \ cal/^\circ C \]
+\[ C = 18 \pm 3 \ \ cal/^\circ C \]
 
 Com essas informações em mãos, podemos então realizar os cálculos necessários seguindo as fórmulas deduzidas anteriormente:
 
 \[ N = (m_1 + C) \cdot \Delta T_{f1} \]
-\[ N = (216,07 + 18,25) \cdot (19,2 - 13,1) \]
-\[ N = 1429,352 \]
+\[ N = (216,07 + 18) \cdot (19,2 - 13,1) \]
+\[ N = 1427,827 \]
 
 \[ D = m_2 \cdot \Delta T_{f2} \]
-\[ D = 205,75 \cdot \Delta (19,2 - 97,1) \]
+\[ D = 205,75 \cdot (19,2 - 97,1) \]
 \[ D = 16027,925 \]
 
 \[ c_m = \frac{N}{D} \]
-\[ c_m = \frac{1429,352}{16027,925} \]
-\[ c_m = - 0,089178855 \ \ cal/g^\circ C \]
+\[ c_m = \frac{1427,827}{16027,925} \]
+\[ c_m = - 0,0890837 \ \ cal/g^\circ C \]
 
 E propagando as incertezas:
 
@@ -46,20 +46,20 @@ E propagando as incertezas:
 \[ \delta \Delta T_{f2} = 0,1 + 0,1 = 0,2 \]
 
 \[ \delta N = [(m_1 + C) \cdot \delta \Delta T_{f1}] + [(\delta m_1 + \delta C) \cdot \Delta T_{f1}] \]
-\[ \delta N = [(216,07 + 18,25) \cdot (0,2)] + [(0,01 + \delta C) \cdot (19,2 - 13,1)] \]
-\[ \delta N = xxx \]
+\[ \delta N = [(216,07 + 18,25) \cdot (0,2)] + [(0,01 + 3) \cdot (19,2 - 13,1)] \]
+\[ \delta N = 65,774 \]
 
 \[ \delta D = (\delta m_2 \cdot \Delta T_{f2}) + (m_2 \cdot \delta \Delta T_{f2}) \]
 \[ \delta D = [0,2 \cdot (19,2 - 97,1)] + (205,75 \cdot 0,2) \]
-\[ \delta D = yyy \]
+\[ \delta D = 25,57 \]
 
 \[ \delta c_m = \frac{N \cdot \delta D + \delta N \cdot D}{D^2} \]
-\[ \delta c_m = \frac{1429,352 \cdot yyy + \delta N \cdot 16027,925}{16027,925^2} \]
-\[ \delta c_m = zzzz \]
+\[ \delta c_m = \frac{1427,827 \cdot 25,57 + 65,774 \cdot 16027,925}{16027,925^2} \]
+\[ \delta c_m = 0,0042458316 \]
 
-Dessa forma, podemos tomar o módulo dos valores calculados, pois uma capacidade negativa não existe, e nesse caso ela só ficou dessa forma pois o metal perdeu calor (então o seu termo na equação do equilíbrio sai negativo). Então, temos que a capacidade calorífica desse metal desconhecido vale:
+Dessa forma, podemos tomar o módulo dos valores calculados, pois uma capacidade negativa não existe, e nesse caso ela só ficou dessa forma pois o metal perdeu calor (então o seu termo na equação do equilíbrio sai negativo). Então, temos que a capacidade calorífica desse metal desconhecido, ajustando com as incertezas, vale:
 
-\[ \mathbf{c_m = 0,089178855 \pm zzzz } \]
+\[ \mathbf{c_m = 0,089 \pm 0,004 } \]
 
 Comparando com os valores tabelados, podemos dizer que o valor se encontra muito próximo do Cobre ($c_{cu} = 0,093$) e também da liga metálica Latão ($c_{l} = 0,092$). Porém, além dos detalhes tabelados temos outro elemento muito importante nessa dedução: a cor do metal. Como podemos ver no vídeo, ela é bem laranja escuro, o que parece muito cobre com uma camada de óxido na sua superfície.
 
@@ -69,8 +69,8 @@ Comparando com os valores tabelados, podemos dizer que o valor se encontra muito
   \caption{Aproximação no vídeo focando no pedaço de metal desconhecido.}
 \end{figure}
 
-Então, dito tudo isso, podemos afirmar com grande certeza de que o metal utilizado no experimento é um pedaço de \textbf{Cobre}.\\
+Então, dito tudo isso, podemos estimar que o metal utilizado no experimento é um pedaço de \textbf{Cobre}. Dando mais suporte a essa ideia, podemos ver que ao comparar o valor obtido ($c_m$) com o tabelado para o Cobre ($c_{cu}$), ele \textbf{foi compatível experimentalmente}, pois o intervalo da incerteza englobou o valor tabelado.
 
-Utilizando então o valor de $c_{cu}$ como referência, podemos notar que ele\\
-1- se compatível = olha que legal
-2- se não compativel = perda de calor por um sistema ideal, troca do calorimetro com o ar, buraco do termometro por convecção
+Vale ressaltar também que o latão é uma liga de Cobre com Zinco, sendo o primeiro compondo em média 70\% da liga. Por causa disso que as capacidades caloríficas são realmente muito próximas, e nos fizeram a utilizar o elemento visual como fator de decisão entre qual valor escolher.\\
+
+Além disso, não podemos deixar de comentar que essa compatibilidade foi no limite do intervalo, o que mostra que ainda sim nosso experimento não foi muito preciso. Isso se deve ao fato de que estamos desconsiderando as perdas de calores entre os momentos do experimento, como na hora de transportar o metal para o calorímetro, bem como outras menores interações, que podem ter removido ou adicionado energia no sistema.

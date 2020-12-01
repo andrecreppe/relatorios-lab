@@ -8,9 +8,9 @@ Conforme descrito na metodologia, os dados relativos às massas e às temperatur
         \hline
         \textbf{Condição de medida} & \textbf{Temperatura (°C)}\\
         \hline 
-        Ebulição da água ($t_c$)  & $t_c = 97,1$ \\
-        Equilíbrio inicial com apenas água fria ($t_1$) & $t_1 = 8,8$  \\  
-        Equilíbrio final após a adição de água em vapor ($t_f$) & $t_f = 71,7$  \\
+        Ebulição da água ($t_c$)  & $t_c = 97,1 \pm 0,1$ \\
+        Equilíbrio inicial com apenas água fria ($t_1$) & $t_1 = 8,8 \pm 0,1$  \\  
+        Equilíbrio final após a adição de água em vapor ($t_f$) & $t_f = 71,7 \pm 0,1$  \\
         \hline
         \end{tabular}
     \caption{Valores registrados experimentalmente para as temperaturas.} 
@@ -27,20 +27,54 @@ Para as massas coletadas ao longo do experimento, temos a seguinte tabela:
         Massa do copo do calorímetro  ($m_c$)  & $m_c = 52,24 \pm 0,01$ \\
         Massa de água fria  ($m_1$) & $m_1 = 167,48 \pm 0,01$  \\  
         Massa Total do sistema ($m_f$) & $m_f = 187,02 \pm 0,01$  \\
-        Massa de água condensada  ($m_2$) & $m_2 = m_f - m_1 = 187,02 - 167,48 = 19,54 \pm 0,02$  \\
+        Massa de água condensada & $m_2 = m_f - m_1 = 187,02 - 167,48 = $  \\
+        ($m_2$)& $= 19,54 \pm 0,02$\\
         \hline
         \end{tabular}
     \caption{Valores registrados experimentalmente para as massas.} 
 \end{table}
 
-Dessa forma, sabendo que o calor específico da água é $c_a= 1,00 cal/g^\circ C$ e que a capacidade térmica calculada no primeiro experimento é $C = 18,25 cal/^\circ C$, temos condições agora de calcular qual o valor do calor latente de condensação da água a partir da expressão descrita na metodologia. Então, temos os seguintes cálculos:
+Dessa forma, sabendo que o calor específico da água é $c_a= 1,00 cal/g^\circ C$ e que a capacidade térmica calculada no primeiro experimento é $C = (18 \pm 3) cal/^\circ C$, temos condições agora de calcular qual o valor do calor latente de condensação da água a partir da expressão descrita na metodologia. Então, temos os seguintes cálculos:
 
 \[ L_c = \frac{(m_1 \cdot c_a + C) \cdot (t_1 - t_f)}{m_2} + c_a \cdot (t_c - t_f)\]
-\[ L_c = \frac{(167,48 \cdot 1,00 + 18,25) \cdot (8,8 - 71,7)}{19,54} + 1,00 \cdot (97,1 - 71,7)\]
-\[ L_c = \frac{(167,48 + 18,25) \cdot (- 62,9)}{19,54} + (25,4)\]
-\[ L_c = \frac{(185,73) \cdot (- 62,9)}{19,54} + (25,4) = \frac{-11682,417}{19,54} + (25,4) = -597,8719 + 25,4\]
-\[\therefore L_C = -572,47190 \frac{cal}{g}\]
+\[ L_c = \frac{(167,48 \cdot 1,00 + 18) \cdot (8,8 - 71,7)}{19,54} + 1,00 \cdot (97,1 - 71,7)\]
+\[ L_c = \frac{(167,48 + 18) \cdot (- 62,9)}{19,54} + (25,4)\]
+\[ L_c = \frac{(185,48) \cdot (- 62,9)}{19,54} + (25,4) = \frac{-11666,692}{19,54} + (25,4) = -597,067144 + 25,4\]
 
-Frente ao valor tabelado do calor latente de condensação do vapor da água, $L_{c-ref}= -539 cal/g$, podemos concluir que o valor encontrado, $L_c= -572,47190 cal/g$, é equivalente ao valor de referência.
+\[\therefore L_C = -571,667144 \frac{cal}{g}\]
+
+E a incerteza  $\delta L_C$ será:
+\[ L_c = \frac{(m_1 \cdot c_a + C) \cdot (t_1 - t_f)}{m_2} + c_a \cdot (t_c - t_f)\]
+\[\therefore \delta L_C =  \delta \left[\frac{ (m_1 c_a + C) (t_1 - t_f) }{(m_2)}\right] +  \delta[c_a(t_c - t_f)] \]
+\[\delta L_C =  \frac{ \delta[(m_1 c_a + C) (t_1 - t_f)] (m_2)  + [(m_1 c_a + C) (t_1 - t_f)] \delta (m_2) }{(m_2)^2} + \delta c_a(t_c - t_f) \]
+
+\begin{multline*}
+    \delta L_C =  \frac{(c_a [ (m_1 + C)  \delta(t_1 - t_f) + \delta (m_1 + C) (t_1 - t_f)] (m_2) + (m_1 c_a + C) (t_1 - t_f) \delta (m_2)  }{(m_2)^2} + \\
+    + \delta c_a (t_c - t_f)
+\end{multline*}
+
+\begin{multline*}
+    \delta L_C =  \frac{c_a [ (m_1 + C)  (\delta t_1 + \delta t_f) + \delta (m_1 + C) (t_1 - t_f)] (m_2) + (m_1 c_a + C) (t_1 - t_f) (\delta m_2)  }{(m_2)^2} +\\
+    + c_a(\delta t_c + \delta t_f)
+\end{multline*}
+
+\begin{multline*}
+    \delta L_C = \frac{(185,48) (0,1 + 0,1) + (0,01 + 3) (- 62,9)] (19,54)}{(19,54)^2} +\\
+    + \frac{(185,73) (-62,9) (0,02)}{(19,54)^2} + (1) (0,1 + 0,1)
+\end{multline*}
+
+\[\delta L_C =  \frac{[ (185,73)  (0,2) + (3,01) (-62,9)] (19,54) + (185,73)(-62,9)(0,02)  }{(19,54)^2} + (0,2)\]
+
+\[\delta L_C =  \frac{[ (37,146) + (-189,329)] (19,54) + (-233,64834)  }{381,8116} + (0,2)\]
+
+\[\delta L_C =  \frac{(4425,3215) + (-233,64834) }{381,8116} + (0,2) = \frac{4658,96984}{381,8116} + (0,2)\]
+
+\[\delta L_C =  (12,20227) + (0,2) = 12,4022742106  \]
+
+Dessa forma, ajustando o valor calculado teremos:
+
+\[\therefore \mathbf{L_C = (-570 \pm 10) \frac{cal}{g}}\]
+
+Frente ao valor tabelado do calor latente de condensação do vapor da água, $L_{c-ref}= -539 cal/g$, podemos concluir que o valor encontrado, $L_c= (-570 \pm 10) cal/g$, não é equivalente ao valor de referência. Podemos justificar esse resultado por alguns motivos, dentre eles os erros inerentes ao experimento, como na medição das variáveis envolvidas. Além disso, podemos apontar os fatores temperatura e tempo em que interferências da temperatura ambiente e o tempo de medição podem afetar o resultado final. Somado a isso, podemos apontar como outra fonte de erro a massa final encontrada para a água condensada, pois no sistema em questão o vapor de água pode escapar para o ambiente, fazendo com que o resultado final não represente de maneira real o experimento.
 
 O motivo do resultado ser negativo é simples: a quantidade de calor (Q) será maior que zero quando o sistema receber calor; por outro lado, quando o sistema cede calor, temos que a quantidade de calor é negativa. Tendo em vista que a condensação é uma transformação física provocada pela perda de calor ($Q < 0$), na fórmula de calorimetria $Q = mL$, a variável L (coeficiente de calor latente) será negativa.
